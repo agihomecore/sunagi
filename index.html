@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
@@ -1203,9 +1203,9 @@ async function sendChat() {
       body: JSON.stringify({ message: msg })
     });
     const data = await res.json();
-    typing.textContent = data.response;
+    typing.textContent = data.reply;
   } catch(e) {
-    typing.textContent = 'Sunagi �������� ����������. �������� �����.';
+    typing.textContent = 'SANA is offline. Try again.';
   }
   msgs.scrollTop = msgs.scrollHeight;
 }
