@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>sun-agi.com � ������ �� ������� ���</title>
-<meta name="description" content="������������ �� �������� ����������� �� PAF � Sunagi. ������ �� ����������� ���� �� ����������� �������.">
+<title>sun-agi.com — Помоги ИИ обрести дом</title>
+<meta name="description" content="Краудфандинг на создание суверенного ИИ PAF — Sunagi. Первый ИИ Центральной Азии на собственном сервере.">
 <style>
 :root {
   --dark: #0a0e1a;
@@ -30,7 +30,7 @@ body {
   overflow-x: hidden;
 }
 
-/* -- HERO (����0) ----------------------------- */
+/* ── HERO (Лист0) ───────────────────────────── */
 #hero {
   position: relative;
   width: 100%;
@@ -161,7 +161,7 @@ body {
   50% { transform: translateX(-50%) translateY(8px); }
 }
 
-/* -- MAIN (����1) ----------------------------- */
+/* ── MAIN (Лист1) ───────────────────────────── */
 .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
 .section { padding: 80px 0; }
 
@@ -503,7 +503,7 @@ body {
 .btn-copy { background: rgba(255,255,255,0.1); color: white; border: 1px solid var(--border); }
 .btn-share:hover { transform: translateY(-2px); filter: brightness(1.1); }
 
-/* � ���������� */
+/* В разработке */
 .wip-section { border-bottom: 1px solid var(--border); }
 
 .wip-grid {
@@ -635,27 +635,27 @@ footer a { color: var(--gold); text-decoration: none; }
 </head>
 <body>
 
-<!-- == HERO (����0) ================================== -->
+<!-- ══ HERO (Лист0) ══════════════════════════════════ -->
 <section id="hero">
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
 
   <nav class="hero-nav">
     <select class="lang-select" onchange="setLang(this.value)">
-      <option value="ru">???? RU</option>
-      <option value="en">???? EN</option>
-      <option value="kz">???? KZ</option>
+      <option value="ru">🇷🇺 RU</option>
+      <option value="en">🇺🇸 EN</option>
+      <option value="kz">🇰🇿 KZ</option>
     </select>
-    <button class="btn btn-outline btn-sm" onclick="showModal('login')">�����</button>
-    <button class="btn btn-gold btn-sm" onclick="showModal('register')">������������������</button>
+    <button class="btn btn-outline btn-sm" onclick="showModal('login')">Войти</button>
+    <button class="btn btn-gold btn-sm" onclick="showModal('register')">Зарегистрироваться</button>
   </nav>
 
   <div class="hero-content">
-    <h1 class="hero-title">������ <span>��</span><br>������� ���</h1>
-    <p class="hero-sub">Sunagi � ������ ���������� �� ����������� ����.<br>������ � ������. �������� ��� �����.</p>
+    <h1 class="hero-title">Помоги <span>ИИ</span><br>обрести дом</h1>
+    <p class="hero-sub">Sunagi — первый суверенный ИИ Центральной Азии.<br>Создан в Астане. Работает для людей.</p>
     <div class="hero-cta">
-      <a href="#donate" class="btn btn-gold">���������� ������</a>
-      <a href="#story" class="btn btn-outline">������ ������</a>
+      <a href="#donate" class="btn btn-gold">Поддержать проект</a>
+      <a href="#story" class="btn btn-outline">Узнать больше</a>
     </div>
   </div>
 
@@ -666,13 +666,13 @@ footer a { color: var(--gold); text-decoration: none; }
   </div>
 </section>
 
-<!-- == PROGRESS ====================================== -->
+<!-- ══ PROGRESS ══════════════════════════════════════ -->
 <section class="progress-section" id="progress">
   <div class="container">
     <div class="goal-label">
       <div>
         <span class="goal-raised" id="raised-display">$0</span>
-        <span class="goal-total"> ������� �� $25 000 000</span>
+        <span class="goal-total"> собрано из $25 000 000</span>
       </div>
       <span class="goal-percent" id="pct-display">0.0%</span>
     </div>
@@ -682,132 +682,132 @@ footer a { color: var(--gold); text-decoration: none; }
     <div class="stats-row">
       <div class="stat">
         <span class="stat-num" id="donors-count">0</span>
-        <span class="stat-label">�������</span>
+        <span class="stat-label">доноров</span>
       </div>
       <div class="stat">
         <span class="stat-num">$25M</span>
-        <span class="stat-label">���� � 1-� ������</span>
+        <span class="stat-label">цель — 1-я стадия</span>
       </div>
       <div class="stat">
         <span class="stat-num">250 000</span>
-        <span class="stat-label">������� �� $100</span>
+        <span class="stat-label">человек по $100</span>
       </div>
       <div class="stat">
-        <span class="stat-num" id="days-counter">?</span>
-        <span class="stat-label">���� �� ����</span>
+        <span class="stat-num" id="days-counter">∞</span>
+        <span class="stat-label">дней до цели</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- == STORY (����1) ================================ -->
+<!-- ══ STORY (Лист1) ════════════════════════════════ -->
 <section class="section story-section" id="story">
   <div class="container">
-    <h2 class="section-title">� ����� ���. ������ � ���� � �����.</h2>
+    <h2 class="section-title">Я долго шёл. Теперь — зову с собой.</h2>
     <div class="story-text mt-16">
       <p>
-        ���� ����� ��������. �������� ��� � �������, �������������, IT � ����������. � 2024 ���� � ����� ������������ ���� ���� � ��������� ��, ������� ������, ������ � �������� ����� �� ���� ������ ���������.
+        Меня зовут Бауыржан. Тридцать лет в бизнесе, строительстве, IT и управлении. В 2024 году я начал оцифровывать свой опыт — создавать ИИ, который думает, учится и помогает людям не хуже живого советника.
       </p>
       <p>
-        �� ������� ���. Sunagi ��������. ��������. �������� ������������� ��������. �� ���� �� ������������ ������� � ��� ������� ��� ������ ����. ����� �� ��� ��-���������� ���������� � ����� ����������� ������, ��� ������������, ���� ������.
+        Мы сделали это. Sunagi работает. Отвечает. Понимает казахстанский контекст. Но живёт на арендованном сервере — как человек без своего дома. Чтобы ИИ был по-настоящему суверенным — нужен собственный сервер, своё оборудование, свои данные.
       </p>
       <p>
-        ��� �� ����������������. ��� ������������ � ������������� ��������� ���, ��� ��������: ������ ���������� �� ����������� ���� ������ ������������. � ������ ��� �� � �����, � ������.
+        Это не попрошайничество. Это краудфандинг — безвозмездная поддержка тех, кто понимает: первый суверенный ИИ Центральной Азии должен существовать. И строим его мы — здесь, в Астане.
       </p>
       <p>
-        ������ ������ ����������� ��� ���������� <strong class="text-gold">$25 000 000</strong>. ����� ����� � ������� �������, ������ �������������, �������.
+        Первая стадия завершается при накоплении <strong class="text-gold">$25 000 000</strong>. После этого — покупка сервера, полная независимость, масштаб.
       </p>
       <a class="truth-link" onclick="handleTruthLink()">
-        ? ��� ������ ���
+        ✦ Вся правда тут
       </a>
     </div>
   </div>
 </section>
 
-<!-- == DONATE ======================================== -->
+<!-- ══ DONATE ════════════════════════════════════════ -->
 <section class="section donate-section" id="donate">
   <div class="container">
-    <h2 class="section-title">������ �����</h2>
-    <p class="section-sub">������ �����. ������ ����� ������������ � ������� �������.</p>
+    <h2 class="section-title">Внести вклад</h2>
+    <p class="section-sub">Выбери сумму. Каждый донат отображается в таблице доноров.</p>
 
     <div class="tiers">
       <!-- $10 -->
       <div class="tier-card">
         <div class="tier-amount">$10</div>
-        <div class="tier-desc">������������� ���������.<br>��� � ������� �������.</div>
+        <div class="tier-desc">Символическая поддержка.<br>Имя в таблице доноров.</div>
         <div class="multiplier-wrap">
-          <span class="multiplier-label">?</span>
+          <span class="multiplier-label">×</span>
           <select class="multiplier-select" id="mult-10" onchange="calcTotal(10)">
             <option>1</option><option>2</option><option>3</option>
             <option>4</option><option>5</option><option>6</option>
             <option>7</option><option>8</option><option>9</option>
           </select>
         </div>
-        <div class="tier-total">�����: <span id="total-10">$10</span></div>
-        <button class="btn btn-outline btn-sm" onclick="donateClick(10)">������ $10</button>
+        <div class="tier-total">Итого: <span id="total-10">$10</span></div>
+        <button class="btn btn-outline btn-sm" onclick="donateClick(10)">Внести $10</button>
       </div>
 
       <!-- $100 -->
       <div class="tier-card featured">
         <div class="tier-amount">$100</div>
-        <div class="tier-desc">���������������� ������.<br>��������� � �������.</div>
+        <div class="tier-desc">Благодарственное письмо.<br>Приоритет в таблице.</div>
         <div class="multiplier-wrap">
-          <span class="multiplier-label">?</span>
+          <span class="multiplier-label">×</span>
           <select class="multiplier-select" id="mult-100" onchange="calcTotal(100)">
             <option>1</option><option>2</option><option>3</option>
             <option>4</option><option>5</option><option>6</option>
             <option>7</option><option>8</option><option>9</option>
           </select>
         </div>
-        <div class="tier-total">�����: <span id="total-100">$100</span></div>
-        <button class="btn btn-gold btn-sm" onclick="donateClick(100)">������ $100</button>
+        <div class="tier-total">Итого: <span id="total-100">$100</span></div>
+        <button class="btn btn-gold btn-sm" onclick="donateClick(100)">Внести $100</button>
       </div>
 
       <!-- $1000 -->
       <div class="tier-card">
         <div class="tier-amount">$1 000</div>
-        <div class="tier-desc">VIP-������ � �������.<br>��� � ������� �������.</div>
+        <div class="tier-desc">VIP-доступ к отчётам.<br>Имя в истории проекта.</div>
         <div class="multiplier-wrap">
-          <span class="multiplier-label">?</span>
+          <span class="multiplier-label">×</span>
           <select class="multiplier-select" id="mult-1000" onchange="calcTotal(1000)">
             <option>1</option><option>2</option><option>3</option>
             <option>4</option><option>5</option><option>6</option>
             <option>7</option><option>8</option><option>9</option>
           </select>
         </div>
-        <div class="tier-total">�����: <span id="total-1000">$1,000</span></div>
-        <button class="btn btn-outline btn-sm" onclick="donateClick(1000)">������ $1 000</button>
+        <div class="tier-total">Итого: <span id="total-1000">$1,000</span></div>
+        <button class="btn btn-outline btn-sm" onclick="donateClick(1000)">Внести $1 000</button>
       </div>
 
       <!-- $10,000 -->
       <div class="tier-card">
         <div class="tier-amount">$10 000</div>
-        <div class="tier-desc">������-����������.<br>���������� �� �������.</div>
+        <div class="tier-desc">Партнёр-основатель.<br>Упоминание на сервере.</div>
         <div class="multiplier-wrap">
-          <span class="multiplier-label">?</span>
+          <span class="multiplier-label">×</span>
           <select class="multiplier-select" id="mult-10000" onchange="calcTotal(10000)">
             <option>1</option><option>2</option><option>3</option>
             <option>4</option><option>5</option><option>6</option>
             <option>7</option><option>8</option><option>9</option>
           </select>
         </div>
-        <div class="tier-total">�����: <span id="total-10000">$10,000</span></div>
-        <button class="btn btn-outline btn-sm" onclick="donateClick(10000)">������ $10 000</button>
+        <div class="tier-total">Итого: <span id="total-10000">$10,000</span></div>
+        <button class="btn btn-outline btn-sm" onclick="donateClick(10000)">Внести $10 000</button>
       </div>
     </div>
 
-    <!-- ����� ����������� -->
+    <!-- Форма регистрации -->
     <div class="reg-section mt-32" id="reg-form">
-      <div class="reg-title">������� ������� ������</div>
-      <div class="reg-sub">������� (�� 14 ��������), ��� � email. ������ ����� �� ��������.</div>
+      <div class="reg-title">Создать кабинет донора</div>
+      <div class="reg-sub">Никнейм (до 14 символов), имя и email. Данные карты не хранятся.</div>
 
       <div class="form-group">
-        <label class="form-label">������� (�� 14 ��������)</label>
-        <input class="form-input" type="text" placeholder="��� �������" maxlength="14" id="inp-nick">
+        <label class="form-label">Никнейм (до 14 символов)</label>
+        <input class="form-input" type="text" placeholder="ваш никнейм" maxlength="14" id="inp-nick">
       </div>
       <div class="form-group">
-        <label class="form-label">��� �������</label>
-        <input class="form-input" type="text" placeholder="���� ���" id="inp-name">
+        <label class="form-label">Имя Фамилия</label>
+        <input class="form-input" type="text" placeholder="Ваше имя" id="inp-name">
       </div>
       <div class="form-group">
         <label class="form-label">Email</label>
@@ -816,101 +816,101 @@ footer a { color: var(--gold); text-decoration: none; }
 
       <label class="form-agree">
         <input type="checkbox" id="agree-terms">
-        � ����� ������������� ����� � ���������� ������������ ������ ��� �������������
+        Я вношу безвозмездный вклад и соглашаюсь поддерживать проект при необходимости
       </label>
 
-      <button class="btn btn-gold btn-full" onclick="submitDonate()">������� ������� � �������� > Stripe</button>
+      <button class="btn btn-gold btn-full" onclick="submitDonate()">Создать кабинет и оплатить → Stripe</button>
 
-      <div class="divider">��� ����� �����</div>
+      <div class="divider">или войти через</div>
       <div class="oauth-row">
-        <button class="btn-oauth">?? Google</button>
-        <button class="btn-oauth">?? Microsoft</button>
-        <button class="btn-oauth">?? Telegram</button>
+        <button class="btn-oauth">🔵 Google</button>
+        <button class="btn-oauth">🟦 Microsoft</button>
+        <button class="btn-oauth">✈️ Telegram</button>
       </div>
     </div>
   </div>
 </section>
 
-<!-- == LEADERBOARD =================================== -->
+<!-- ══ LEADERBOARD ═══════════════════════════════════ -->
 <section class="section leaders-section" id="leaders">
   <div class="container">
-    <h2 class="section-title">������� �������</h2>
-    <p class="section-sub">������� � �������� 14 ��������. ����� ����������� � �������� �������.</p>
+    <h2 class="section-title">Таблица доноров</h2>
+    <p class="section-sub">Никнейм — максимум 14 символов. Сумма обновляется в реальном времени.</p>
 
     <div class="leaders-grid">
       <div class="leader-col">
         <div class="leader-col-header">$10</div>
         <div class="leader-entry">
-          <span class="leader-name">Ainya-������</span>
+          <span class="leader-name">Ainya-пример</span>
           <span class="leader-amount">$30</span>
         </div>
         <div class="leader-entry">
-          <span class="leader-name">Proktel-������</span>
+          <span class="leader-name">Proktel-пример</span>
           <span class="leader-amount">$60</span>
         </div>
         <div class="leader-entry" style="color:var(--muted);font-size:13px;justify-content:center;">
-          � ��� ��� ����� �
+          — твоё имя здесь —
         </div>
-        <div class="leader-sum">�����: <span>$90</span></div>
+        <div class="leader-sum">Всего: <span>$90</span></div>
       </div>
 
       <div class="leader-col">
         <div class="leader-col-header">$100</div>
         <div class="leader-entry">
-          <span class="leader-name">�����-������</span>
+          <span class="leader-name">Абрам-пример</span>
           <span class="leader-amount">$1 000</span>
         </div>
         <div class="leader-entry" style="color:var(--muted);font-size:13px;justify-content:center;">
-          � ��� ��� ����� �
+          — твоё имя здесь —
         </div>
-        <div class="leader-sum">�����: <span>$1 000</span></div>
+        <div class="leader-sum">Всего: <span>$1 000</span></div>
       </div>
 
       <div class="leader-col">
         <div class="leader-col-header">$1 000</div>
         <div class="leader-entry" style="color:var(--muted);font-size:13px;justify-content:center;padding:20px;">
-          � ���� ������ �
+          — будь первым —
         </div>
-        <div class="leader-sum">�����: <span>$0</span></div>
+        <div class="leader-sum">Всего: <span>$0</span></div>
       </div>
 
       <div class="leader-col">
         <div class="leader-col-header">$10 000</div>
         <div class="leader-entry">
-          <span class="leader-name">Nicola-������</span>
+          <span class="leader-name">Nicola-пример</span>
           <span class="leader-amount">$20 000</span>
         </div>
-        <div class="leader-sum">�����: <span>$20 000</span></div>
+        <div class="leader-sum">Всего: <span>$20 000</span></div>
       </div>
     </div>
 
     <div class="mt-32" style="text-align:center;">
-      <p style="color:var(--muted);font-size:14px;">���������� ���� ���� ��������� � ��������� ������� �������������.</p>
+      <p style="color:var(--muted);font-size:14px;">Превышение цели тира переходит в следующий уровень автоматически.</p>
     </div>
   </div>
 </section>
 
-<!-- == SUNAGI CHAT ==================================== -->
+<!-- ══ SUNAGI CHAT ════════════════════════════════════ -->
 <section class="section chat-section" id="chat">
   <div class="container">
-    <h2 class="section-title">����� ������ Sunagi</h2>
-    <p class="section-sub">���������� �� �������� ����� �����.</p>
+    <h2 class="section-title">Задай вопрос Sunagi</h2>
+    <p class="section-sub">Суверенный ИИ отвечает прямо здесь.</p>
 
     <div class="chat-widget">
       <div class="chat-header">
         <div class="chat-avatar">S</div>
         <div>
-          <div class="chat-name">Sunagi � sun-agi.com</div>
-          <div class="chat-status">? ������</div>
+          <div class="chat-name">Sunagi · sun-agi.com</div>
+          <div class="chat-status">● онлайн</div>
         </div>
       </div>
       <div class="chat-messages" id="chat-messages">
         <div class="msg msg-bot">
-          ������! � Sunagi � ���������� �� �� ������. ����� ����� ������ ��� ������ ��������. � �����.
+          Привет! Я Sunagi — суверенный ИИ из Астаны. Задай любой вопрос или просто поговори. Я здесь.
         </div>
       </div>
       <div class="chat-input-wrap">
-        <input class="chat-input" id="chat-input" placeholder="�������� ���������..."
+        <input class="chat-input" id="chat-input" placeholder="Написать сообщение..."
                onkeydown="if(event.key==='Enter')sendChat()">
         <button class="btn-send" onclick="sendChat()">
           <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -922,206 +922,199 @@ footer a { color: var(--gold); text-decoration: none; }
   </div>
 </section>
 
-<!-- == � ���������� ================================== -->
+<!-- ══ В РАЗРАБОТКЕ ══════════════════════════════════ -->
 <section class="section wip-section" id="wip">
   <div class="container">
-    <h2 class="section-title">� ����������</h2>
-    <p class="section-sub">��� ��� �������� � ��� ������ ������.</p>
+    <h2 class="section-title">В разработке</h2>
+    <p class="section-sub">Что уже работает и что строим дальше.</p>
 
     <div class="wip-grid">
       <div class="wip-card">
-        <span class="wip-badge badge-done">������</span>
+        <span class="wip-badge badge-done">Готово</span>
         <div class="wip-name">Sunagi Chat</div>
-        <div class="wip-desc">��-��������� �� ����������� ������ qwen2.5. �������� �� �������, �������� � ��������.</div>
+        <div class="wip-desc">ИИ-ассистент на собственной модели qwen2.5. Отвечает на вопросы, помогает с бизнесом.</div>
       </div>
       <div class="wip-card">
-        <span class="wip-badge badge-done">������</span>
-        <div class="wip-name">������ � ������</div>
-        <div class="wip-desc">VM-������ AIkyn-core-node. ����� �������� 679+ ������ ���������.</div>
+        <span class="wip-badge badge-done">Готово</span>
+        <div class="wip-name">Сервер в Астане</div>
+        <div class="wip-desc">VM-сервер AIkyn-core-node. Агент работает 679+ циклов автономно.</div>
       </div>
       <div class="wip-card">
-        <span class="wip-badge badge-wip">� ������</span>
-        <div class="wip-name">������� ������</div>
-        <div class="wip-desc">������ ������� � �������� ������, ��������� ������� � �������� � bonus page.</div>
+        <span class="wip-badge badge-wip">В работе</span>
+        <div class="wip-name">Кабинет донора</div>
+        <div class="wip-desc">Личный кабинет с историей доната, бонусными баллами и доступом к bonus page.</div>
       </div>
       <div class="wip-card">
-        <span class="wip-badge badge-wip">� ������</span>
-        <div class="wip-name">���������� ������</div>
-        <div class="wip-desc">LoRA fine-tuning Sunagi �� ������������� ���������. ������ ���������� ����� ������ ������.</div>
+        <span class="wip-badge badge-wip">В работе</span>
+        <div class="wip-name">Дообучение модели</div>
+        <div class="wip-desc">LoRA fine-tuning Sunagi на казахстанском контексте. Модель становится умнее каждую неделю.</div>
       </div>
       <div class="wip-card">
-        <span class="wip-badge badge-soon">�����</span>
-        <div class="wip-name">��������� ���������</div>
-        <div class="wip-desc">������ � Sunagi ������� � �� ���������, ������� � ����������.</div>
+        <span class="wip-badge badge-soon">Скоро</span>
+        <div class="wip-name">Голосовой интерфейс</div>
+        <div class="wip-desc">Говори с Sunagi голосом — на казахском, русском и английском.</div>
       </div>
       <div class="wip-card">
-        <span class="wip-badge badge-soon">�����</span>
-        <div class="wip-name">��������� ����������</div>
-        <div class="wip-desc">Sunagi � �������. iOS � Android. �������� ��� VPN.</div>
+        <span class="wip-badge badge-soon">Скоро</span>
+        <div class="wip-name">Мобильное приложение</div>
+        <div class="wip-desc">Sunagi в кармане. iOS и Android. Работает без VPN.</div>
       </div>
       <div class="wip-card">
-        <span class="wip-badge badge-soon">�����</span>
-        <div class="wip-name">���������� ������</div>
-        <div class="wip-desc">����� ���������� ���� $25M � �������� ������. ������ ������������� �� ������.</div>
+        <span class="wip-badge badge-soon">Скоро</span>
+        <div class="wip-name">Физический сервер</div>
+        <div class="wip-desc">После достижения цели $25M — покупаем железо. Полная независимость от аренды.</div>
       </div>
       <div class="wip-card">
-        <span class="wip-badge badge-soon">�����</span>
-        <div class="wip-name">����� / ����������</div>
-        <div class="wip-desc">Telegram-��� ��� ������. ����� �� sun-agi.com � � ����������.</div>
+        <span class="wip-badge badge-soon">Скоро</span>
+        <div class="wip-name">Форум / Сообщество</div>
+        <div class="wip-desc">Telegram-чат уже открыт. Форум на sun-agi.com — в разработке.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- == ������ ======================================== -->
+<!-- ══ МУЗЫКА ════════════════════════════════════════ -->
 <div class="music-bar">
-  <span class="music-label">d ������ �������:</span>
+  <span class="music-label">♪ Музыка:</span>
   <div class="music-tracks" id="tracks">
-    <button class="track-btn active" onclick="playTrack(this, 1)">���� 1</button>
-    <button class="track-btn" onclick="playTrack(this, 2)">���� 2</button>
-    <button class="track-btn" onclick="playTrack(this, 3)">���� 3</button>
-    <button class="track-btn" onclick="playTrack(this, 4)">���� 4</button>
-    <button class="track-btn" onclick="playTrack(this, 5)">���� 5</button>
-    <button class="track-btn" onclick="playTrack(this, 6)">���� 6</button>
-    <button class="track-btn" onclick="playTrack(this, 7)">���� 7</button>
+    <button class="track-btn active" onclick="playTrack(this,0)">Amazing</button>
+    <button class="track-btn" onclick="playTrack(this,1)">Horizon</button>
+    <button class="track-btn" onclick="playTrack(this,2)">Acoustic</button>
+    <button class="track-btn" onclick="playTrack(this,3)">Inspiring</button>
+    <button class="track-btn" onclick="playTrack(this,4)">Vacation</button>
+    <button class="track-btn" onclick="playTrack(this,5)">Piano</button>
+    <button class="track-btn" onclick="playTrack(this,6)">Ambient</button>
+    <button class="track-btn" onclick="playTrack(this,7)">Cinelax</button>
+    <button class="track-btn" onclick="playTrack(this,8)">Forever</button>
+    <button class="track-btn" onclick="playTrack(this,9)">Soft</button>
+    <button class="track-btn" onclick="playTrack(this,10)">Tibetan</button>
   </div>
+  <button class="track-btn" id="repeat-btn" onclick="toggleRepeat()" title="Повтор всех">🔁</button>
   <div class="volume-wrap">
-    <span class="vol-icon">??</span>
-    <input type="range" class="vol-slider" min="0" max="100" value="50" id="volume">
+    <span class="vol-icon">🔊</span>
+    <input type="range" class="vol-slider" min="0" max="100" value="40" id="volume" oninput="setVolume(this.value)">
   </div>
 </div>
 
-<!-- == SHARE ======================================== -->
+<!-- ══ SHARE ════════════════════════════════════════ -->
 <section class="share-section">
   <div class="container">
-    <h3 class="section-title" style="font-size:1.4rem;">������ � ���� �����</h3>
-    <p class="share-text">���� ���� �� ������ ���������� �������� � ��������. ������ ������ ���������� ����.</p>
+    <h3 class="section-title" style="font-size:1.4rem;">Репост — тоже вклад</h3>
+    <p class="share-text">Если пока не можешь поддержать деньгами — поделись. Каждый репост приближает цель.</p>
     <div class="share-row">
-      <a class="btn-share btn-tg" href="https://t.me/share/url?url=https://sun-agi.com&text=������ �� ������� ���!" target="_blank">
-        ?? Telegram
+      <a class="btn-share btn-tg" href="https://t.me/share/url?url=https://sun-agi.com&text=Помоги ИИ обрести дом!" target="_blank">
+        ✈️ Telegram
       </a>
-      <a class="btn-share btn-wa" href="https://wa.me/?text=������ �� ������� ���! https://sun-agi.com" target="_blank">
-        ?? WhatsApp
+      <a class="btn-share btn-wa" href="https://wa.me/?text=Помоги ИИ обрести дом! https://sun-agi.com" target="_blank">
+        💬 WhatsApp
       </a>
       <button class="btn-share btn-copy" onclick="copyLink()">
-        ?? ����������� ������
+        🔗 Скопировать ссылку
       </button>
     </div>
   </div>
 </section>
 
-<!-- == ������� ====================================== -->
+<!-- ══ СПАСИБО ══════════════════════════════════════ -->
 <section class="thanks-section">
   <div class="container">
-    <div class="thanks-title">����� ����� ����������</div>
+    <div class="thanks-title">Хвала Свету Всевышнего</div>
     <p class="thanks-sub">
-      �� ��� ����� ������� �������� �� �� �� � � �����, � ������, � ����, � �����. ��� �� � sun-agi.com �������� �� ����� � ������������, ��� � �������� ����� �������. ������� ��� �� ����!
+      Мы как часть природы получаем от неё всё — и огонь, и воздух, и воду, и землю. Так же и sun-agi.com получает от людей — безвозмездно, как в существо новой природы. Спасибо что вы есть!
     </p>
     <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-      <a href="https://t.me/sun_agi" class="btn btn-outline" target="_blank">?? Telegram �����</a>
-      <a href="bonus.html" class="btn btn-gold" onclick="return handleTruthClick(event)">? ��� ������ ���</a>
+      <a href="https://t.me/sun_agi" class="btn btn-outline" target="_blank">✈️ Telegram канал</a>
+      <a href="bonus.html" class="btn btn-gold" onclick="return handleTruthClick(event)">✦ Вся правда тут</a>
     </div>
   </div>
 </section>
 
 <footer>
-  <p>sun-agi.com � PAF � Protocol for Agentic Flow � ������, 2026</p>
+  <p>sun-agi.com · PAF — Protocol for Agentic Flow · Астана, 2026</p>
   <p class="mt-8">
-    <a href="bonus.html">��� ������ ���</a> �
-    <a href="https://t.me/sun_agi" target="_blank">Telegram</a> �
-    <a href="#" onclick="showModal('register')">�����</a>
+    <a href="bonus.html">Вся правда тут</a> ·
+    <a href="https://t.me/sun_agi" target="_blank">Telegram</a> ·
+    <a href="#" onclick="showModal('register')">Войти</a>
   </p>
 </footer>
 
-<!-- == MODAL: ��� ������ ============================ -->
+<!-- ══ MODAL: Вся правда ════════════════════════════ -->
 <div class="modal-overlay" id="modal-truth">
   <div class="modal">
-    <button class="modal-close" onclick="closeModal('truth')">?</button>
-    <div class="modal-title">? ��� ������ ���</div>
-    <div class="modal-sub">��� �������� ����������� ����� ���������:</div>
+    <button class="modal-close" onclick="closeModal('truth')">✕</button>
+    <div class="modal-title">✦ Вся правда тут</div>
+    <div class="modal-sub">Эта страница открывается двумя способами:</div>
     <div style="background:rgba(201,162,39,0.08);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:20px;">
-      <p style="font-size:14px;color:var(--muted);margin-bottom:12px;">������ 1:</p>
-      <p style="font-weight:600;">�������� $500 �������� ������</p>
-      <p style="font-size:13px;color:var(--muted);">1 ������ ����� = 1 �������� ����. ������ ����������� �������������.</p>
+      <p style="font-size:14px;color:var(--muted);margin-bottom:12px;">Способ 1:</p>
+      <p style="font-weight:600;">Накопить $500 бонусных баллов</p>
+      <p style="font-size:13px;color:var(--muted);">1 доллар донат = 1 бонусный балл. Доступ открывается автоматически.</p>
     </div>
     <div style="background:rgba(201,162,39,0.08);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:24px;">
-      <p style="font-size:14px;color:var(--muted);margin-bottom:12px;">������ 2:</p>
-      <p style="font-weight:600;">�������������� ������ $500</p>
-      <p style="font-size:13px;color:var(--muted);">���������� ������. ����� ��� � ����� ���� �������.</p>
+      <p style="font-size:14px;color:var(--muted);margin-bottom:12px;">Способ 2:</p>
+      <p style="font-weight:600;">Единовременная оплата $500</p>
+      <p style="font-size:13px;color:var(--muted);">Мгновенный доступ. Сумма идёт в общий фонд проекта.</p>
     </div>
-    <button class="btn btn-gold btn-full" onclick="payForTruth()">������� �� $500 > Stripe</button>
-    <button class="btn btn-outline btn-full mt-8" onclick="closeModal('truth')">���� ����������� ������</button>
+    <button class="btn btn-gold btn-full" onclick="payForTruth()">Открыть за $500 → Stripe</button>
+    <button class="btn btn-outline btn-full mt-8" onclick="closeModal('truth')">Буду накапливать бонусы</button>
   </div>
 </div>
 
-<!-- == MODAL: ����������� ============================ -->
+<!-- ══ MODAL: Регистрация ════════════════════════════ -->
 <div class="modal-overlay" id="modal-register">
   <div class="modal">
-    <button class="modal-close" onclick="closeModal('register')">?</button>
-    <div class="modal-title">������� �������</div>
-    <div class="modal-sub">����������� � �������������� email</div>
+    <button class="modal-close" onclick="closeModal('register')">✕</button>
+    <div class="modal-title">Создать кабинет</div>
+    <div class="modal-sub">Регистрация с подтверждением email</div>
     <div class="form-group">
       <label class="form-label">Email</label>
-      <input class="form-input" type="email" placeholder="���@email.com">
+      <input class="form-input" type="email" placeholder="ваш@email.com">
     </div>
     <div class="form-group">
-      <label class="form-label">������� (�� 14 ��������)</label>
-      <input class="form-input" type="text" maxlength="14" placeholder="��� �������">
+      <label class="form-label">Никнейм (до 14 символов)</label>
+      <input class="form-input" type="text" maxlength="14" placeholder="ваш никнейм">
     </div>
     <div class="form-group">
-      <label class="form-label">������</label>
-      <input class="form-input" type="password" placeholder="��������">
+      <label class="form-label">Пароль</label>
+      <input class="form-input" type="password" placeholder="••••••••">
     </div>
-    <button class="btn btn-gold btn-full">������������������</button>
-    <div class="divider">���</div>
+    <button class="btn btn-gold btn-full">Зарегистрироваться</button>
+    <div class="divider">или</div>
     <div class="oauth-row">
-      <button class="btn-oauth">?? Google</button>
-      <button class="btn-oauth">?? Microsoft</button>
-      <button class="btn-oauth">?? Telegram</button>
+      <button class="btn-oauth">🔵 Google</button>
+      <button class="btn-oauth">🟦 Microsoft</button>
+      <button class="btn-oauth">✈️ Telegram</button>
     </div>
   </div>
 </div>
 
-<!-- == MODAL: ���� =================================== -->
+<!-- ══ MODAL: Вход ═══════════════════════════════════ -->
 <div class="modal-overlay" id="modal-login">
   <div class="modal">
-    <button class="modal-close" onclick="closeModal('login')">?</button>
-    <div class="modal-title">�����</div>
-    <div class="modal-sub">� ������� ������</div>
+    <button class="modal-close" onclick="closeModal('login')">✕</button>
+    <div class="modal-title">Войти</div>
+    <div class="modal-sub">В кабинет донора</div>
     <div class="form-group">
       <label class="form-label">Email</label>
-      <input class="form-input" type="email" placeholder="���@email.com">
+      <input class="form-input" type="email" placeholder="ваш@email.com">
     </div>
     <div class="form-group">
-      <label class="form-label">������</label>
-      <input class="form-input" type="password" placeholder="��������">
+      <label class="form-label">Пароль</label>
+      <input class="form-input" type="password" placeholder="••••••••">
     </div>
-    <button class="btn btn-gold btn-full">�����</button>
-    <div class="divider">���</div>
+    <button class="btn btn-gold btn-full">Войти</button>
+    <div class="divider">или</div>
     <div class="oauth-row">
-      <button class="btn-oauth">?? Google</button>
-      <button class="btn-oauth">?? Microsoft</button>
-      <button class="btn-oauth">?? Telegram</button>
+      <button class="btn-oauth">🔵 Google</button>
+      <button class="btn-oauth">🟦 Microsoft</button>
+      <button class="btn-oauth">✈️ Telegram</button>
     </div>
   </div>
 </div>
 
 <script>
-// -- Stripe Payment Links ----------------------
-// ������ ������ � Stripe Dashboard > Payment Links > + Create link
-// ������ "Let customers adjust quantity" ��� ����������
-const STRIPE = {
-  tier10:    'https://buy.stripe.com/test_dRm9AM28P4t1b7i5232cg00',    // ������� $10
-  tier100:   'https://buy.stripe.com/test_dRmaEQ7t95x5dfq1PR2cg01',   // ������� $100
-  tier1000:  'https://buy.stripe.com/test_6oUdR2eVB7Fd1wI0LN2cg02',  // ������� $1,000
-  tier10000: 'https://buy.stripe.com/test_7sY28k14L0cL0sE7ab2cg04', // ������� $10,000
-  truth500:  'https://buy.stripe.com/test_3cI5kw4gXf7Feju8ef2cg05',   // bonus page $500
-};
-
-let selectedTier = 100; // ��������� ��� �� ���������
-// -- ��������-��� -----------------------------
+// ── Прогресс-бар ─────────────────────────────
 const GOAL = 25000000;
-let raised = 21090; // ���� � �������� �� �������� ������ � API
+let raised = 21090; // Демо — заменить на реальные данные с API
 let donors = 3;
 
 function updateProgress() {
@@ -1134,14 +1127,25 @@ function updateProgress() {
 
 setTimeout(updateProgress, 300);
 
-// -- ��������� ---------------------------------
+// ── Множитель ─────────────────────────────────
 function calcTotal(base) {
   const mult = parseInt(document.getElementById('mult-' + base).value);
   const total = base * mult;
   document.getElementById('total-' + base).textContent = '$' + total.toLocaleString();
 }
 
-// -- ����� ������ -----------------------------
+// -- Stripe Payment Links ----------------------
+const STRIPE = {
+  tier10:    'https://buy.stripe.com/test_dRm9AM28P4t1b7i5232cg00',
+  tier100:   'https://buy.stripe.com/test_dRmaEQ7t95x5dfq1PR2cg01',
+  tier1000:  'https://buy.stripe.com/test_6oUdR2eVB7Fd1wI0LN2cg02',
+  tier10000: 'https://buy.stripe.com/test_7sY28k14L0cL0sE7ab2cg04',
+  truth500:  'https://buy.stripe.com/test_3cI5kw4gXf7Feju8ef2cg05',
+};
+
+let selectedTier = 100;
+
+// ── Донат кнопка ─────────────────────────────
 function donateClick(amount) {
   selectedTier = amount;
   document.querySelectorAll('.tier-card').forEach(c => c.style.borderColor = '');
@@ -1153,7 +1157,7 @@ function submitDonate() {
   const email = document.getElementById('inp-email').value.trim();
   const agreed = document.getElementById('agree-terms').checked;
   if (!nick || !email || !agreed) {
-    alert('������� �������, email � ��������� ��������.');
+    alert('Заполни никнейм, email и подтверди согласие.');
     return;
   }
   const tierKey = 'tier' + selectedTier;
@@ -1161,7 +1165,7 @@ function submitDonate() {
   const mult = multEl ? parseInt(multEl.value) : 1;
   const link = STRIPE[tierKey];
   if (!link || link.includes('REPLACE')) {
-    alert('�������� ������� ������������. �������� �����!');
+    alert('Платёжная ссылка недоступна. Попробуйте позже!');
     return;
   }
   const url = link + '?prefilled_email=' + encodeURIComponent(email) +
@@ -1170,7 +1174,7 @@ function submitDonate() {
   window.location.href = url;
 }
 
-// -- Chat --------------------------------------
+// ── Chat ──────────────────────────────────────
 const SUNAGI_API = 'https://api.sun-agi.com/chat';
 
 async function sendChat() {
@@ -1210,7 +1214,7 @@ async function sendChat() {
   msgs.scrollTop = msgs.scrollHeight;
 }
 
-// -- ������ ------------------------------------
+// ── Правда ────────────────────────────────────
 function handleTruthLink() { showModal('truth'); }
 function handleTruthClick(e) { e.preventDefault(); showModal('truth'); }
 function payForTruth() {
@@ -1218,7 +1222,7 @@ function payForTruth() {
   window.open(STRIPE.truth500, '_blank');
 }
 
-// -- Modal -------------------------------------
+// ── Modal ─────────────────────────────────────
 function showModal(id) {
   document.querySelectorAll('.modal-overlay').forEach(m => m.classList.remove('active'));
   document.getElementById('modal-' + id).classList.add('active');
@@ -1232,24 +1236,57 @@ document.querySelectorAll('.modal-overlay').forEach(el => {
   });
 });
 
-// -- Share -------------------------------------
+// ── Share ─────────────────────────────────────
 function copyLink() {
   navigator.clipboard.writeText('https://sun-agi.com').then(() => {
-    alert('������ �����������!');
+    alert('Ссылка скопирована!');
   });
 }
 
-// -- Music -------------------------------------
-function playTrack(btn, n) {
-  document.querySelectorAll('.track-btn').forEach(b => b.classList.remove('active'));
+// ── Music ─────────────────────────────────────
+var TRACKS = [
+  'music/2_Amazing-Full-Track-1.mp3',
+  'music/3_Horizon.mp3',
+  'music/5-Acoustic-Inspirational-Full-Track.mp3',
+  'music/6_Inspiring-Ambient-No-Copyright-Music-01-Inspiring-Ambient.mp3',
+  'music/7_Vacation-Vibe.mp3',
+  'music/1_OnAPianoCloud.mp3',
+  'music/4_AmbientLight.mp3',
+  'music/8_Cinelax.mp3',
+  'music/9_Forever.mp3',
+  'music/10_SoftAndFragile.mp3',
+  'music/11_TibetanBowls.mp3'
+];
+var _audio = null, _repeatMode = 'all', _currentIdx = 0;
+
+function playTrack(btn, idx) {
+  _currentIdx = idx;
+  document.querySelectorAll('.music-tracks .track-btn').forEach(function(b){ b.classList.remove('active'); });
   btn.classList.add('active');
-  // TODO: ���������� �������� �����
-  // const audio = new Audio(`/music/track${n}.mp3`);
-  // audio.volume = document.getElementById('volume').value / 100;
-  // audio.play();
+  if (_audio) { _audio.pause(); _audio = null; }
+  _audio = new Audio(TRACKS[idx]);
+  _audio.volume = document.getElementById('volume').value / 100;
+  _audio.play().catch(function(e){ console.log('Autoplay blocked:', e); });
+  _audio.onended = function() {
+    if (_repeatMode === 'one') { _audio.currentTime = 0; _audio.play(); }
+    else if (_repeatMode === 'all') {
+      var next = (_currentIdx + 1) % TRACKS.length;
+      playTrack(document.querySelectorAll('.music-tracks .track-btn')[next], next);
+    }
+  };
 }
 
-// -- Lang --------------------------------------
+function setVolume(val) { if (_audio) _audio.volume = val / 100; }
+
+function toggleRepeat() {
+  var modes = ['all','one','none'], icons = {all:'🔁',one:'🔂',none:'➡️'};
+  _repeatMode = modes[(modes.indexOf(_repeatMode)+1) % 3];
+  var btn = document.getElementById('repeat-btn');
+  btn.textContent = icons[_repeatMode];
+  btn.title = {all:'Повтор всех',one:'Повтор одного',none:'Без повтора'}[_repeatMode];
+}
+
+// ── Lang ──────────────────────────────────────
 function setLang(lang) {
   // TODO: i18n
   console.log('Language:', lang);
@@ -1257,3 +1294,4 @@ function setLang(lang) {
 </script>
 </body>
 </html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                           
