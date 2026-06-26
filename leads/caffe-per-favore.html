@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caffè Per Favore — Italian Coffee, Astana</title>
+<style>
+  :root{
+    --brown:#6b4226;
+    --cream:#fbf3e7;
+    --gold:#c08a3e;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Segoe UI',Arial,sans-serif;color:#3a2a1d;background:#fff;line-height:1.6;}
+  .hero{
+    background:linear-gradient(135deg,var(--brown) 0%,#3a2716 100%);
+    color:#fbf3e7;padding:64px 24px 56px;text-align:center;
+  }
+  .hero .logo{font-size:36px;font-weight:800;font-style:italic;}
+  .hero .sub{font-size:14px;letter-spacing:3px;text-transform:uppercase;opacity:.75;margin-top:8px;}
+  .hero p{margin-top:18px;font-size:18px;opacity:.95;max-width:520px;margin-left:auto;margin-right:auto;}
+  .hero a.cta{
+    display:inline-block;margin-top:28px;background:var(--gold);color:#2b1c10;
+    padding:14px 32px;border-radius:30px;text-decoration:none;font-weight:700;font-size:16px;
+  }
+  section{padding:48px 24px;max-width:760px;margin:0 auto;}
+  h2{color:var(--brown);font-size:24px;margin-bottom:18px;text-align:center;}
+  .offer{background:var(--cream);text-align:center;}
+  .offer .badge{
+    display:inline-block;background:var(--brown);color:#fff;font-size:28px;font-weight:800;
+    border-radius:50%;width:96px;height:96px;line-height:96px;margin-bottom:16px;
+  }
+  .menu{text-align:center;}
+  .menu ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:600px;margin:0 auto;}
+  .menu li{background:var(--cream);border-radius:12px;padding:18px;font-weight:600;}
+  .contact{background:var(--cream);text-align:center;}
+  .contact .row{margin:8px 0;font-size:17px;}
+  footer{text-align:center;padding:24px;font-size:13px;color:#888;}
+  @media(max-width:480px){.menu ul{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="logo">Caffè Per Favore</div>
+  <div class="sub">Italian Coffee · Astana</div>
+  <p>Ciao, соседи! Ароматный кофе и завтраки рядом с домом, каждый день</p>
+  <a class="cta" href="#contact">Адрес и часы</a>
+</header>
+
+<section class="offer">
+  <h2>Скидка соседям</h2>
+  <div class="badge">-15%</div>
+  <p>На все кофейные напитки — для тех, кто живёт рядом</p>
+</section>
+
+<section class="menu">
+  <h2>Каждый день</h2>
+  <ul>
+    <li>Ароматный кофе</li>
+    <li>Завтраки и ланчи от 1 200 ₸</li>
+  </ul>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Контакты</h2>
+  <div class="row">📍 Astana, ул. Туркестан, 8 (по ул. Алматы)</div>
+</section>
+
+<footer>© 2026 Caffè Per Favore</footer>
+
+</body>
+</html>
