@@ -44,4 +44,120 @@
   .cnew:hover{border-color:var(--green);color:var(--green);}
   #chat-msgs{height:300px;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px;background:#fff;}
   .msg{max-width:82%;padding:10px 13px;border-radius:12px;font-size:14px;line-height:1.55;}
-  .msg.bot{background:var(--light);align-self:flex-start;border
+  .msg.bot{background:var(--light);align-self:flex-start;border-radius:4px 12px 12px 12px;}
+  .msg.user{background:var(--green);color:#fff;align-self:flex-end;border-radius:12px 4px 12px 12px;}
+  .mnm{font-size:9px;letter-spacing:1px;color:var(--green);text-transform:uppercase;margin-bottom:3px;}
+  .typing{display:flex;gap:4px;align-items:center;padding:4px 0;}
+  .typing span{width:6px;height:6px;background:var(--green);border-radius:50%;opacity:.25;animation:blink 1.2s infinite;}
+  .typing span:nth-child(2){animation-delay:.2s;}.typing span:nth-child(3){animation-delay:.4s;}
+  @keyframes blink{0%,100%{opacity:.25;}50%{opacity:1;}}
+  .cinp{padding:12px;border-top:1px solid rgba(0,0,0,.06);display:flex;gap:8px;}
+  .cinp input{flex:1;border:1px solid rgba(0,0,0,.12);border-radius:20px;padding:10px 14px;font-size:14px;outline:none;}
+  .cinp input:focus{border-color:var(--green);}
+  .cinp button{background:var(--green);color:#fff;border:none;border-radius:50%;width:38px;height:38px;font-size:16px;cursor:pointer;}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="logo">NEW <span class="glasses">∞</span> OPTICS</div>
+  <p>Оптика с собственной мастерской в Алматы — очки, линзы и ремонт оправ в одном месте</p>
+  <a class="cta" href="tel:+77718650808">Позвонить: 8 771 865 08 08</a>
+</header>
+
+<section class="services">
+  <h2>Что мы делаем</h2>
+  <ul>
+    <li>Подбор и изготовление очков</li>
+    <li>Контактные линзы</li>
+    <li>Ремонт и подгонка оправ</li>
+    <li>Собственная мастерская при магазине</li>
+  </ul>
+</section>
+
+<section class="contact">
+  <h2>Контакты</h2>
+  <div class="row">📍 г. Алматы, Мангилик Ел, 19</div>
+  <div class="row">📞 <a href="tel:+77718650808">8 771 865 08 08</a></div>
+  <div class="row">📞 <a href="tel:+77719087652">8 771 908 76 52</a></div>
+</section>
+
+<section class="chat-sec">
+  <h2>Спросите AI-консультанта</h2>
+  <div class="cwrap">
+    <div class="cbox">
+      <div class="chdr">
+        <div class="cav">AI</div>
+        <div>
+          <div class="cname">NEW OPTICS Помощник</div>
+          <div class="cstat">● Online</div>
+        </div>
+        <button class="cnew" id="cnew">Новый чат</button>
+      </div>
+      <div id="chat-msgs"></div>
+      <div class="cinp">
+        <input type="text" id="ci" placeholder="Задайте вопрос..." autocomplete="off">
+        <button id="cb">→</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 NEW OPTICS. Все права защищены.</footer>
+
+<script>
+const WORKER_URL='https://galymzhan-api.notebookastana.workers.dev';
+const STORAGE_KEY='newoptics_chat_history';
+const SYS=`Ты — AI-консультант оптики NEW OPTICS в Алматы.
+Рассказываешь про услуги: подбор и изготовление очков, контактные линзы, ремонт и подгонка оправ, собственная мастерская при магазине.
+Адрес: г. Алматы, Мангилик Ел, 19.
+Телефоны для записи: 8 771 865 08 08 и 8 771 908 76 52.
+Отвечай дружелюбно и по делу. Если пишут по-русски — отвечай по-русски, если на казахском — на казахском.`;
+
+let chatHistory=[];
+function saveHistory(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(chatHistory));}catch(e){}}
+function loadHistory(){try{const s=localStorage.getItem(STORAGE_KEY);if(s){chatHistory=JSON.parse(s);return chatHistory.length>0;}}catch(e){}return false;}
+function buildMessages(){return [{role:'system',content:SYS},...chatHistory.slice(-20)];}
+
+const msgs=document.getElementById('chat-msgs');
+const inp=document.getElementById('ci');
+const btn=document.getElementById('cb');
+const cnew=document.getElementById('cnew');
+
+function addMsg(text,isUser){
+  const d=document.createElement('div');d.className=`msg ${isUser?'user':'bot'}`;
+  if(!isUser){const n=document.createElement('div');n.className='mnm';n.textContent='NEW OPTICS';d.appendChild(n);}
+  const t=document.createElement('span');t.textContent=text;d.appendChild(t);
+  msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;
+}
+function showTyping(){const d=document.createElement('div');d.className='msg bot';d.id='typ';d.innerHTML='<div class="typing"><span></span><span></span><span></span></div>';msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;}
+function rmTyping(){const e=document.getElementById('typ');if(e)e.remove();}
+function showWelcome(){addMsg('Здравствуйте! Я AI-консультант NEW OPTICS. Спросите про очки, линзы или ремонт оправ.',false);}
+
+async function send(){
+  const text=inp.value.trim();if(!text)return;
+  inp.value='';btn.disabled=true;
+  addMsg(text,true);
+  chatHistory.push({role:'user',content:text});
+  saveHistory();
+  showTyping();
+  try{
+    const r=await fetch(WORKER_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'llama-3.3-70b-versatile',messages:buildMessages(),max_tokens:512})});
+    const d=await r.json();
+    const reply=d.choices?.[0]?.message?.content||'Связи нет, попробуйте позже.';
+    rmTyping();addMsg(reply,false);
+    chatHistory.push({role:'assistant',content:reply});
+    saveHistory();
+  }catch(e){rmTyping();addMsg('Связи нет. Попробуйте позже или звоните 8 771 865 08 08.',false);}
+  btn.disabled=false;
+}
+btn.addEventListener('click',send);
+inp.addEventListener('keydown',e=>{if(e.key==='Enter')send();});
+cnew.addEventListener('click',function(){chatHistory=[];localStorage.removeItem(STORAGE_KEY);msgs.innerHTML='';showWelcome();});
+
+if(loadHistory()&&chatHistory.length>0){chatHistory.forEach(m=>addMsg(m.content,m.role==='user'));msgs.scrollTop=msgs.scrollHeight;}
+else{showWelcome();}
+</script>
+
+</body>
+</html>
