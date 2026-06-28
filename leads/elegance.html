@@ -6,68 +6,187 @@
 <title>Elegance Men's Shop — мужская одежда и обувь, Астана</title>
 <style>
   :root{
-    --black:#0d0d0d;
-    --cyan:#19c6d8;
-    --light:#f4f4f4;
+    --navy:#10182b;
+    --navy2:#1b2740;
+    --gold:#c9a24b;
+    --gold-light:#e6c878;
+    --cream:#f6f1e7;
+    --ink:#1a1a1a;
   }
   *{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:'Segoe UI',Arial,sans-serif;color:#1a1a1a;background:#fff;line-height:1.6;}
+  body{font-family:'Segoe UI',Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.65;}
+  a{color:inherit;}
+
+  /* ===== HERO ===== */
   .hero{
-    background:linear-gradient(135deg,var(--black) 0%,#222 100%);
-    color:#fff;padding:64px 24px 56px;text-align:center;
+    position:relative;min-height:78vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
+    text-align:center;color:#fff;padding:40px 24px;
+    background:linear-gradient(180deg,rgba(10,14,26,.55) 0%,rgba(10,14,26,.78) 55%,rgba(10,14,26,.94) 100%),
+               url('images/elegance/hero.jpg') center 30%/cover no-repeat;
   }
-  .hero .logo{font-size:40px;font-weight:800;letter-spacing:3px;text-transform:uppercase;}
-  .hero .logo span{color:var(--cyan);}
-  .hero .sub{font-size:14px;letter-spacing:4px;text-transform:uppercase;opacity:.7;margin-top:6px;}
-  .hero p{margin-top:18px;font-size:18px;opacity:.92;max-width:520px;margin-left:auto;margin-right:auto;}
+  .hero .eyebrow{font-size:12px;letter-spacing:5px;text-transform:uppercase;color:var(--gold-light);margin-bottom:14px;}
+  .hero .logo{font-size:clamp(38px,7vw,64px);font-weight:800;letter-spacing:6px;text-transform:uppercase;}
+  .hero .logo span{color:var(--gold-light);}
+  .hero .sub{font-size:13px;letter-spacing:5px;text-transform:uppercase;opacity:.75;margin-top:8px;}
+  .hero p{margin-top:22px;font-size:18px;opacity:.95;max-width:520px;}
+  .hero .ctas{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap;justify-content:center;}
   .hero a.cta{
-    display:inline-block;margin-top:28px;background:var(--cyan);color:#0d0d0d;
-    padding:14px 32px;border-radius:30px;text-decoration:none;font-weight:700;font-size:16px;
+    display:inline-block;background:var(--gold);color:var(--navy);
+    padding:14px 30px;border-radius:30px;text-decoration:none;font-weight:700;font-size:15px;
+    box-shadow:0 8px 24px rgba(201,162,75,.35);
   }
-  section{padding:48px 24px;max-width:760px;margin:0 auto;}
-  h2{color:var(--black);font-size:24px;margin-bottom:18px;text-align:center;}
-  .info{background:var(--light);text-align:center;}
-  .info ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:600px;margin:0 auto;}
-  .info li{background:#fff;border-radius:12px;padding:18px;font-weight:600;box-shadow:0 2px 8px rgba(0,0,0,.06);}
-  .contact{text-align:center;}
-  .contact .row{margin:8px 0;font-size:17px;}
-  .contact a{color:#0d0d0d;font-weight:700;text-decoration:none;border-bottom:2px solid var(--cyan);}
-  footer{text-align:center;padding:24px;font-size:13px;color:#888;background:var(--black);color:#aaa;}
+  .hero a.cta.ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.55);box-shadow:none;}
+  .scroll-cue{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);font-size:11px;letter-spacing:3px;color:rgba(255,255,255,.6);text-transform:uppercase;}
+
+  /* ===== SECTION SHELL ===== */
+  section{padding:64px 24px;max-width:1080px;margin:0 auto;}
+  .eyebrow-sm{display:block;text-align:center;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:10px;font-weight:700;}
+  h2{color:var(--navy);font-size:28px;margin-bottom:8px;text-align:center;font-weight:800;}
+  .sec-sub{text-align:center;color:#666;max-width:560px;margin:0 auto 36px;font-size:15px;}
+
+  /* ===== ABOUT / FACADE ===== */
+  .about{background:var(--cream);}
+  .about-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center;}
+  .about-grid img{width:100%;border-radius:14px;box-shadow:0 18px 40px rgba(16,24,43,.18);display:block;}
+  .about-text p{margin-bottom:14px;color:#3a3a3a;font-size:15.5px;}
+  .about-text .badge-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px;}
+  .about-text .badge{background:#fff;border:1px solid rgba(16,24,43,.1);border-radius:30px;padding:8px 16px;font-size:13px;font-weight:600;color:var(--navy);}
+  @media(max-width:760px){.about-grid{grid-template-columns:1fr;}}
+
+  /* ===== GALLERY ===== */
+  .gallery{background:#fff;}
+  .gal-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:170px;gap:10px;
+  }
+  .gal-grid figure{margin:0;overflow:hidden;border-radius:10px;position:relative;background:var(--navy);}
+  .gal-grid img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease;}
+  .gal-grid figure:hover img{transform:scale(1.06);}
+  .gal-grid figcaption{
+    position:absolute;left:0;right:0;bottom:0;padding:10px 12px;font-size:12px;color:#fff;
+    background:linear-gradient(180deg,transparent,rgba(0,0,0,.65));letter-spacing:.5px;
+  }
+  .gal-big{grid-column:span 2;grid-row:span 2;}
+  .gal-tall{grid-row:span 2;}
+  @media(max-width:760px){
+    .gal-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px;}
+    .gal-big{grid-column:span 2;grid-row:span 2;}
+    .gal-tall{grid-row:span 1;}
+  }
+
+  /* ===== CATEGORIES STRIP ===== */
+  .strip{background:var(--navy);color:#fff;}
+  .strip h2{color:#fff;}
+  .strip .sec-sub{color:rgba(255,255,255,.65);}
+  .strip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .strip-card{border-radius:14px;overflow:hidden;position:relative;height:260px;}
+  .strip-card img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.78);transition:filter .3s;}
+  .strip-card:hover img{filter:brightness(.95);}
+  .strip-card .tag{
+    position:absolute;left:14px;bottom:14px;background:rgba(16,24,43,.75);backdrop-filter:blur(2px);
+    color:var(--gold-light);font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;
+    padding:8px 14px;border-radius:30px;
+  }
+  @media(max-width:760px){.strip-grid{grid-template-columns:1fr;}}
+
+  /* ===== INFO ===== */
+  .info{background:var(--cream);text-align:center;}
+  .info ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:640px;margin:0 auto;}
+  .info li{background:#fff;border-radius:12px;padding:18px;font-weight:600;box-shadow:0 4px 16px rgba(16,24,43,.07);color:var(--navy);}
   @media(max-width:480px){.info ul{grid-template-columns:1fr;}}
+
+  /* ===== CONTACT ===== */
+  .contact{text-align:center;}
+  .contact .row{margin:10px 0;font-size:17px;}
+  .contact a{color:var(--navy);font-weight:700;text-decoration:none;border-bottom:2px solid var(--gold);}
+
+  footer{text-align:center;padding:28px;font-size:13px;background:var(--navy);color:rgba(255,255,255,.55);}
+
+  /* ===== CHAT ===== */
+  .chat-sec{background:#fff;}
   .cwrap{max-width:600px;margin:0 auto;}
-  .cbox{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06);}
-  .chdr{padding:14px 18px;border-bottom:1px solid rgba(0,0,0,.06);display:flex;align-items:center;gap:10px;background:var(--light);}
-  .cav{width:36px;height:36px;border-radius:50%;background:var(--black);color:var(--cyan);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;flex-shrink:0;}
+  .cbox{background:#fff;border:1px solid rgba(16,24,43,.1);border-radius:14px;overflow:hidden;box-shadow:0 8px 30px rgba(16,24,43,.1);}
+  .chdr{padding:14px 18px;border-bottom:1px solid rgba(16,24,43,.08);display:flex;align-items:center;gap:10px;background:var(--cream);}
+  .cav{width:36px;height:36px;border-radius:50%;background:var(--navy);color:var(--gold-light);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;flex-shrink:0;}
   .cname{font-weight:700;font-size:14px;color:#222;}
-  .cstat{font-size:10px;color:var(--cyan);letter-spacing:1px;}
-  .cnew{margin-left:auto;background:none;border:1px solid rgba(0,0,0,.12);color:#666;border-radius:6px;padding:4px 10px;font-size:11px;cursor:pointer;}
-  .cnew:hover{border-color:var(--cyan);color:var(--black);}
+  .cstat{font-size:10px;color:#9a7a2e;letter-spacing:1px;}
+  .cnew{margin-left:auto;background:none;border:1px solid rgba(16,24,43,.15);color:#666;border-radius:6px;padding:4px 10px;font-size:11px;cursor:pointer;}
+  .cnew:hover{border-color:var(--gold);color:var(--navy);}
   #chat-msgs{height:300px;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px;background:#fff;}
   .msg{max-width:82%;padding:10px 13px;border-radius:12px;font-size:14px;line-height:1.55;}
-  .msg.bot{background:var(--light);align-self:flex-start;border-radius:4px 12px 12px 12px;}
-  .msg.user{background:var(--black);color:var(--cyan);align-self:flex-end;border-radius:12px 4px 12px 12px;}
-  .mnm{font-size:9px;letter-spacing:1px;color:var(--cyan);text-transform:uppercase;margin-bottom:3px;}
+  .msg.bot{background:var(--cream);align-self:flex-start;border-radius:4px 12px 12px 12px;}
+  .msg.user{background:var(--navy);color:var(--gold-light);align-self:flex-end;border-radius:12px 4px 12px 12px;}
+  .mnm{font-size:9px;letter-spacing:1px;color:#9a7a2e;text-transform:uppercase;margin-bottom:3px;}
   .typing{display:flex;gap:4px;align-items:center;padding:4px 0;}
-  .typing span{width:6px;height:6px;background:var(--cyan);border-radius:50%;opacity:.25;animation:blink 1.2s infinite;}
+  .typing span{width:6px;height:6px;background:var(--gold);border-radius:50%;opacity:.25;animation:blink 1.2s infinite;}
   .typing span:nth-child(2){animation-delay:.2s;}.typing span:nth-child(3){animation-delay:.4s;}
   @keyframes blink{0%,100%{opacity:.25;}50%{opacity:1;}}
-  .cinp{padding:12px;border-top:1px solid rgba(0,0,0,.06);display:flex;gap:8px;}
-  .cinp input{flex:1;border:1px solid rgba(0,0,0,.12);border-radius:20px;padding:10px 14px;font-size:14px;outline:none;}
-  .cinp input:focus{border-color:var(--cyan);}
-  .cinp button{background:var(--black);color:var(--cyan);border:none;border-radius:50%;width:38px;height:38px;font-size:16px;cursor:pointer;}
+  .cinp{padding:12px;border-top:1px solid rgba(16,24,43,.08);display:flex;gap:8px;}
+  .cinp input{flex:1;border:1px solid rgba(16,24,43,.15);border-radius:20px;padding:10px 14px;font-size:14px;outline:none;}
+  .cinp input:focus{border-color:var(--gold);}
+  .cinp button{background:var(--navy);color:var(--gold-light);border:none;border-radius:50%;width:38px;height:38px;font-size:16px;cursor:pointer;}
 </style>
 </head>
 <body>
 
 <header class="hero">
+  <div class="eyebrow">Men's Shop · Астана</div>
   <div class="logo">elegan<span>ce</span></div>
-  <div class="sub">Men's Shop</div>
-  <p>Мужская одежда и обувь в Астане — для тех, кто ценит сдержанный стиль</p>
-  <a class="cta" href="tel:+87005558876">Позвонить: 8-700-555-88-76</a>
+  <div class="sub">Стиль. Сдержанность. Качество.</div>
+  <p>Мужская одежда, обувь и аксессуары — для тех, кто ценит сдержанный стиль</p>
+  <div class="ctas">
+    <a class="cta" href="tel:+87005558876">Позвонить: 8-700-555-88-76</a>
+    <a class="cta ghost" href="#gallery">Смотреть магазин</a>
+  </div>
+  <div class="scroll-cue">▾ прокрутите вниз</div>
 </header>
 
+<section class="about">
+  <span class="eyebrow-sm">О магазине</span>
+  <h2>Один адрес — весь гардероб</h2>
+  <div class="about-grid">
+    <img src="images/elegance/facade.jpg" alt="Фасад магазина Elegance в Астане">
+    <div class="about-text">
+      <p>Elegance — это магазин мужской одежды и обуви в Астане, где собран полный гардероб: рубашки, поло, свитеры, джинсы, обувь и аксессуары для разных ситуаций — от офиса до выходного дня.</p>
+      <p>Мы лично подбираем каждую коллекцию — фасоны, ткани и цвета, которые остаются актуальными не один сезон.</p>
+      <div class="badge-row">
+        <span class="badge">Без выходных, 10:00–22:00</span>
+        <span class="badge">Примерочные на месте</span>
+        <span class="badge">Подбор образа</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <span class="eyebrow-sm">Внутри Elegance</span>
+  <h2>Магазин, который хочется рассматривать</h2>
+  <p class="sec-sub">Реальные фотографии торгового зала — большой выбор одежды, обуви и аксессуаров на одной площадке.</p>
+  <div class="gal-grid">
+    <figure class="gal-big"><img src="images/elegance/aisle.jpg" alt="Торговый зал Elegance"><figcaption>Торговый зал</figcaption></figure>
+    <figure><img src="images/elegance/shirts-wall.jpg" alt="Стена рубашек и поло"><figcaption>Рубашки и поло</figcaption></figure>
+    <figure class="gal-tall"><img src="images/elegance/shoes-wall.jpg" alt="Стена обуви"><figcaption>Обувь</figcaption></figure>
+    <figure><img src="images/elegance/shelf-mannequins.jpg" alt="Витрина с манекенами"><figcaption>Витрина</figcaption></figure>
+    <figure><img src="images/elegance/shoes-bags.jpg" alt="Обувь и сумки"><figcaption>Обувь и аксессуары</figcaption></figure>
+    <figure class="gal-tall"><img src="images/elegance/sign-counter.jpg" alt="Касса Elegance"><figcaption>Касса</figcaption></figure>
+    <figure><img src="images/elegance/fitting-room.jpg" alt="Примерочная"><figcaption>Примерочная</figcaption></figure>
+    <figure><img src="images/elegance/interior1.jpg" alt="Интерьер магазина"><figcaption>Интерьер</figcaption></figure>
+  </div>
+</section>
+
+<section class="strip">
+  <span class="eyebrow-sm">Ассортимент</span>
+  <h2>Аксессуары до мелочей</h2>
+  <p class="sec-sub">Ремни, очки, парфюм и галстуки — закрываем образ полностью.</p>
+  <div class="strip-grid">
+    <div class="strip-card"><img src="images/elegance/belts-ties.jpg" alt="Ремни и галстуки"><span class="tag">Ремни и галстуки</span></div>
+    <div class="strip-card"><img src="images/elegance/sunglasses.jpg" alt="Солнцезащитные очки"><span class="tag">Очки</span></div>
+    <div class="strip-card"><img src="images/elegance/accessories.jpg" alt="Аксессуары и парфюм"><span class="tag">Парфюм и мелочи</span></div>
+  </div>
+</section>
+
 <section class="info">
-  <h2>График и адреса</h2>
+  <span class="eyebrow-sm">График и адреса</span>
+  <h2>Как нас найти</h2>
   <ul>
     <li>Работаем с 10:00 до 22:00, без выходных</li>
     <li>ArtHouse, ул. Алматы, 11, Астана</li>
@@ -111,6 +230,7 @@ const STORAGE_KEY='elegance_chat_history';
 const SYS=`Ты — AI-консультант магазина мужской одежды и обуви Elegance Men's Shop в Астане.
 Адреса: ArtHouse, ул. Алматы, 11, Астана; второй адрес — ул. Валихановой, 19.
 Работаем с 10:00 до 22:00, без выходных.
+В магазине большой выбор: рубашки, поло, свитеры, джинсы, обувь, а также аксессуары — ремни, галстуки, очки, парфюм.
 Помогаешь подобрать стиль, рассказываешь об ассортименте мужской одежды и обуви.
 Для записи/уточнений — звонить 8-700-555-88-76 или смотреть eleganc.mens.shop.
 Отвечай сдержанно и стильно. Если пишут по-русски — отвечай по-русски, если на казахском — на казахском.`;
