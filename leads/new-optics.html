@@ -6,37 +6,88 @@
 <title>NEW OPTICS — оптика с мастерской, Астана</title>
 <style>
   :root{
-    --green:#2e8b2e;
-    --green-dark:#1d5c1d;
-    --gold:#e8b400;
-    --light:#f3f9ef;
+    --green:#1f7a3d;
+    --green-dark:#103d20;
+    --gold:#e0b400;
+    --gold-light:#f3d35a;
+    --cream:#f6f8f4;
+    --ink:#1a1a1a;
   }
   *{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:'Segoe UI',Arial,sans-serif;color:#1a1a1a;background:#fff;line-height:1.6;}
+  body{font-family:'Segoe UI',Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.6;}
+  img{display:block;max-width:100%;}
+
+  /* HERO */
   .hero{
-    background:linear-gradient(135deg,var(--green) 0%,var(--green-dark) 100%);
-    color:#fff;padding:64px 24px 56px;text-align:center;
+    position:relative;min-height:74vh;display:flex;flex-direction:column;
+    align-items:center;justify-content:center;text-align:center;color:#fff;
+    background:linear-gradient(180deg,rgba(8,20,12,.45) 0%,rgba(8,20,12,.72) 55%,rgba(8,20,12,.92) 100%),
+      url('images/new_optics/hero.jpg') center/cover no-repeat;
+    padding:32px 20px;
   }
-  .hero .logo{font-size:34px;font-weight:800;letter-spacing:1px;}
+  .hero .eyebrow{letter-spacing:3px;font-size:13px;text-transform:uppercase;color:var(--gold-light);margin-bottom:14px;}
+  .hero .logo{font-size:40px;font-weight:800;letter-spacing:1px;}
   .hero .logo .glasses{color:var(--gold);}
-  .hero p{margin-top:14px;font-size:18px;opacity:.92;max-width:520px;margin-left:auto;margin-right:auto;}
+  .hero p.tag{margin-top:14px;font-size:17px;opacity:.92;max-width:520px;}
+  .hero .ctas{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap;justify-content:center;}
   .hero a.cta{
-    display:inline-block;margin-top:28px;background:#fff;color:var(--green-dark);
-    padding:14px 32px;border-radius:30px;text-decoration:none;font-weight:700;font-size:16px;
+    display:inline-block;background:var(--gold);color:var(--green-dark);
+    padding:14px 30px;border-radius:30px;text-decoration:none;font-weight:700;font-size:15px;
   }
-  section{padding:48px 24px;max-width:760px;margin:0 auto;}
-  h2{color:var(--green-dark);font-size:24px;margin-bottom:18px;text-align:center;}
-  .services{background:var(--light);}
-  .services ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:600px;margin:0 auto;}
-  .services li{background:#fff;border-radius:12px;padding:18px;text-align:center;font-weight:600;box-shadow:0 2px 8px rgba(0,0,0,.06);}
-  .contact{text-align:center;background:var(--light);}
+  .hero a.cta.outline{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.6);}
+  .scroll-cue{margin-top:36px;font-size:12px;letter-spacing:2px;opacity:.7;}
+
+  section{padding:56px 24px;max-width:1080px;margin:0 auto;}
+  h2{color:var(--green-dark);font-size:26px;margin-bottom:8px;text-align:center;}
+  .sub{text-align:center;color:#666;font-size:14px;margin-bottom:32px;}
+
+  /* ABOUT */
+  .about{background:var(--cream);}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;max-width:980px;margin:0 auto;}
+  .about-grid img{border-radius:14px;box-shadow:0 12px 30px rgba(0,0,0,.12);width:100%;height:380px;object-fit:cover;}
+  .about-text p{margin-bottom:14px;color:#333;font-size:15px;}
+  .badges{display:flex;flex-direction:column;gap:10px;margin-top:18px;}
+  .badge{background:#fff;border-radius:10px;padding:12px 16px;font-size:14px;font-weight:600;box-shadow:0 2px 8px rgba(0,0,0,.06);display:flex;align-items:center;gap:10px;}
+  .badge .dot{width:8px;height:8px;border-radius:50%;background:var(--gold);flex-shrink:0;}
+  @media(max-width:760px){.about-grid{grid-template-columns:1fr;}.about-grid img{height:260px;}}
+
+  /* GALLERY */
+  .gallery{background:#fff;}
+  .gal-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:170px;gap:10px;max-width:980px;margin:0 auto;}
+  .gal-grid figure{position:relative;overflow:hidden;border-radius:10px;margin:0;}
+  .gal-grid img{width:100%;height:100%;object-fit:cover;transition:transform .4s;}
+  .gal-grid figure:hover img{transform:scale(1.06);}
+  .gal-grid figcaption{
+    position:absolute;left:0;bottom:0;right:0;padding:10px 12px 8px;
+    background:linear-gradient(180deg,transparent,rgba(8,20,12,.85));
+    color:#fff;font-size:13px;font-weight:600;
+  }
+  .gal-big{grid-column:span 2;grid-row:span 2;}
+  .gal-tall{grid-row:span 2;}
+  @media(max-width:760px){.gal-grid{grid-template-columns:repeat(2,1fr);}.gal-big{grid-column:span 2;}}
+
+  /* SERVICES */
+  .services{background:var(--green-dark);color:#fff;}
+  .services h2{color:#fff;}
+  .services .sub{color:rgba(255,255,255,.65);}
+  .services ul{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:980px;margin:0 auto;}
+  .services li{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:20px 14px;text-align:center;font-weight:600;font-size:14px;}
+  @media(max-width:760px){.services ul{grid-template-columns:1fr 1fr;}}
+
+  /* INFO / CONTACT */
+  .info{background:var(--cream);text-align:center;}
+  .hours{font-size:15px;color:#333;margin-bottom:6px;}
+  .addr{font-size:15px;color:#333;}
+  .contact{text-align:center;background:#fff;}
   .contact .row{margin:8px 0;font-size:17px;}
   .contact a{color:var(--green-dark);font-weight:700;text-decoration:none;}
-  footer{text-align:center;padding:24px;font-size:13px;color:#888;}
-  @media(max-width:480px){.services ul{grid-template-columns:1fr;}}
+  .contact a.wa{color:#1f7a3d;}
+  footer{text-align:center;padding:24px;font-size:13px;color:#888;background:var(--cream);}
+
+  /* CHAT */
   .cwrap{max-width:600px;margin:0 auto;}
   .cbox{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06);}
-  .chdr{padding:14px 18px;border-bottom:1px solid rgba(0,0,0,.06);display:flex;align-items:center;gap:10px;background:var(--light);}
+  .chdr{padding:14px 18px;border-bottom:1px solid rgba(0,0,0,.06);display:flex;align-items:center;gap:10px;background:var(--cream);}
   .cav{width:36px;height:36px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;flex-shrink:0;}
   .cname{font-weight:700;font-size:14px;color:#222;}
   .cstat{font-size:10px;color:var(--green);letter-spacing:1px;}
@@ -44,7 +95,7 @@
   .cnew:hover{border-color:var(--green);color:var(--green);}
   #chat-msgs{height:300px;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px;background:#fff;}
   .msg{max-width:82%;padding:10px 13px;border-radius:12px;font-size:14px;line-height:1.55;}
-  .msg.bot{background:var(--light);align-self:flex-start;border-radius:4px 12px 12px 12px;}
+  .msg.bot{background:var(--cream);align-self:flex-start;border-radius:4px 12px 12px 12px;}
   .msg.user{background:var(--green);color:#fff;align-self:flex-end;border-radius:12px 4px 12px 12px;}
   .mnm{font-size:9px;letter-spacing:1px;color:var(--green);text-transform:uppercase;margin-bottom:3px;}
   .typing{display:flex;gap:4px;align-items:center;padding:4px 0;}
@@ -60,13 +111,59 @@
 <body>
 
 <header class="hero">
-  <div class="logo">NEW <span class="glasses">∞</span> OPTICS</div>
-  <p>Оптика с собственной мастерской в Астане — очки, линзы и ремонт оправ в одном месте</p>
-  <a class="cta" href="tel:+77718650808">Позвонить: 8 771 865 08 08</a>
+  <div class="eyebrow">Оптика · Астана</div>
+  <div class="logo">NEW <span class="glasses">⌐◯-◯</span> OPTICS</div>
+  <p class="tag">Очки, линзы и собственная мастерская — подбор и ремонт в одном месте</p>
+  <div class="ctas">
+    <a class="cta" href="tel:+77718650808">Позвонить</a>
+    <a class="cta outline" href="#gallery">Смотреть магазин</a>
+  </div>
+  <div class="scroll-cue">▾ прокрутите вниз</div>
 </header>
+
+<section class="about">
+  <h2>О магазине</h2>
+  <p class="sub">Оптика с примерочной зоной в самом центре Астаны</p>
+  <div class="about-grid">
+    <img src="images/new_optics/fitting.jpg" alt="Зона подбора очков NEW OPTICS" loading="lazy">
+    <div class="about-text">
+      <p>NEW OPTICS — оптика на Мангилик Ел, 19 (угол ул. Алматы), где можно не только купить очки, но и подобрать их с удобством: отдельный стол для примерки, большое зеркало и приветливые консультанты.</p>
+      <p>В ассортименте — оправы и солнцезащитные очки от Police, Tommy Hilfiger, Furla, Cartier и других брендов, контактные линзы Acuvue, а также собственная мастерская для ремонта и подгонки оправ.</p>
+      <div class="badges">
+        <div class="badge"><span class="dot"></span>Ежедневно, без выходных</div>
+        <div class="badge"><span class="dot"></span>Проверка зрения на месте</div>
+        <div class="badge"><span class="dot"></span>Своя мастерская — ремонт и подгонка</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <h2>В магазине</h2>
+  <p class="sub">Как это выглядит изнутри</p>
+  <div class="gal-grid">
+    <figure class="gal-big">
+      <img src="images/new_optics/shelf-wide.jpg" alt="Стеллажи с оправами" loading="lazy">
+      <figcaption>Витрины с оправами</figcaption>
+    </figure>
+    <figure class="gal-tall">
+      <img src="images/new_optics/counter.jpg" alt="Касса и зеркала NEW OPTICS" loading="lazy">
+      <figcaption>Касса и зона консультаций</figcaption>
+    </figure>
+    <figure>
+      <img src="images/new_optics/facade.jpg" alt="Вход в магазин NEW OPTICS" loading="lazy">
+      <figcaption>Вход с улицы Алматы</figcaption>
+    </figure>
+    <figure>
+      <img src="images/new_optics/eyechart.jpg" alt="Таблица для проверки зрения" loading="lazy">
+      <figcaption>Проверка остроты зрения</figcaption>
+    </figure>
+  </div>
+</section>
 
 <section class="services">
   <h2>Что мы делаем</h2>
+  <p class="sub">Полный цикл — от подбора до ремонта</p>
   <ul>
     <li>Подбор и изготовление очков</li>
     <li>Контактные линзы</li>
@@ -75,11 +172,16 @@
   </ul>
 </section>
 
+<section class="info">
+  <h2>Режим работы</h2>
+  <div class="hours">Ежедневно: 10:00 – 20:00</div>
+  <div class="addr">📍 Астана, Мангилик Ел, 19 (угол ул. Алматы)</div>
+</section>
+
 <section class="contact">
   <h2>Контакты</h2>
-  <div class="row">📍 г. Астана, Мангилик Ел, 19</div>
   <div class="row">📞 <a href="tel:+77718650808">8 771 865 08 08</a></div>
-  <div class="row">📞 <a href="tel:+77719087652">8 771 908 76 52</a></div>
+  <div class="row">💬 <a class="wa" href="https://wa.me/77719087652" target="_blank" rel="noopener">WhatsApp: 8 771 908 76 52</a></div>
 </section>
 
 <section class="chat-sec">
@@ -110,8 +212,9 @@ const WORKER_URL='https://galymzhan-api.notebookastana.workers.dev';
 const STORAGE_KEY='newoptics_chat_history';
 const SYS=`Ты — AI-консультант оптики NEW OPTICS в Астане.
 Рассказываешь про услуги: подбор и изготовление очков, контактные линзы, ремонт и подгонка оправ, собственная мастерская при магазине.
-Адрес: г. Астана, Мангилик Ел, 19.
-Телефоны для записи: 8 771 865 08 08 и 8 771 908 76 52.
+В ассортименте оправы и солнцезащитные очки брендов Police, Tommy Hilfiger, Furla, Cartier и других, линзы Acuvue.
+Адрес: г. Астана, Мангилик Ел, 19 (угол ул. Алматы). Работаем ежедневно с 10:00 до 20:00.
+Телефон: 8 771 865 08 08. WhatsApp: 8 771 908 76 52.
 Отвечай дружелюбно и по делу. Если пишут по-русски — отвечай по-русски, если на казахском — на казахском.`;
 
 let chatHistory=[];
