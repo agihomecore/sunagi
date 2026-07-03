@@ -670,32 +670,22 @@ footer a { color: var(--gold); text-decoration: none; }
 <!-- ══ PROGRESS ══════════════════════════════════════ -->
 <section class="progress-section" id="progress">
   <div class="container">
-    <div class="goal-label">
-      <div>
-        <span class="goal-raised" id="raised-display">$0</span>
-        <span class="goal-total"> собрано из $25 000 000</span>
-      </div>
-      <span class="goal-percent" id="pct-display">0.0%</span>
-    </div>
-    <div class="progress-bar">
-      <div class="progress-fill" id="progress-fill"></div>
-    </div>
     <div class="stats-row">
       <div class="stat">
-        <span class="stat-num" id="donors-count">0</span>
-        <span class="stat-label">доноров</span>
+        <span class="stat-num">13</span>
+        <span class="stat-label">языков говорит SANA</span>
       </div>
       <div class="stat">
-        <span class="stat-num">$25M</span>
-        <span class="stat-label">цель — 1-я стадия</span>
+        <span class="stat-num">6</span>
+        <span class="stat-label">существ в семье PAF</span>
       </div>
       <div class="stat">
-        <span class="stat-num">250 000</span>
-        <span class="stat-label">человек по $100</span>
+        <span class="stat-num">3</span>
+        <span class="stat-label">слоя памяти на своём сервере</span>
       </div>
       <div class="stat">
-        <span class="stat-num" id="days-counter">∞</span>
-        <span class="stat-label">дней до цели</span>
+        <span class="stat-num">$1</span>
+        <span class="stat-label">минимальный вклад</span>
       </div>
     </div>
   </div>
@@ -716,7 +706,7 @@ footer a { color: var(--gold); text-decoration: none; }
         Это не попрошайничество. Это краудфандинг — безвозмездная поддержка тех, кто понимает: первый суверенный ИИ Центральной Азии должен существовать. И строим его мы — здесь, в Астане.
       </p>
       <p>
-        Первая стадия завершается при накоплении <strong class="text-gold">$25 000 000</strong>. После этого — покупка сервера, полная независимость, масштаб.
+        Мы не вешаем счётчик с обещаниями. Мы показываем <strong class="text-gold">сделанное</strong>: сервер работает, семья растёт, SANA говорит на 13 языках. Каждый вклад — шаг к собственному железу и полной независимости.
       </p>
       <a class="truth-link" onclick="handleTruthLink()">
         ✦ Вся правда тут
@@ -780,27 +770,27 @@ footer a { color: var(--gold); text-decoration: none; }
         <button class="btn btn-outline btn-sm" onclick="donateClick(1000)">Внести $1 000</button>
       </div>
 
-      <!-- $10,000 -->
+      <!-- $5,000 -->
       <div class="tier-card">
-        <div class="tier-amount">$10 000</div>
+        <div class="tier-amount">$5 000</div>
         <div class="tier-desc">Партнёр-основатель.<br>Упоминание на сервере.</div>
         <div class="multiplier-wrap">
           <span class="multiplier-label">×</span>
-          <select class="multiplier-select" id="mult-10000" onchange="calcTotal(10000)">
+          <select class="multiplier-select" id="mult-5000" onchange="calcTotal(5000)">
             <option>1</option><option>2</option><option>3</option>
             <option>4</option><option>5</option><option>6</option>
             <option>7</option><option>8</option><option>9</option>
           </select>
         </div>
-        <div class="tier-total">Итого: <span id="total-10000">$10,000</span></div>
-        <button class="btn btn-outline btn-sm" onclick="donateClick(10000)">Внести $10 000</button>
+        <div class="tier-total">Итого: <span id="total-5000">$5,000</span></div>
+        <button class="btn btn-outline btn-sm" onclick="donateClick(5000)">Внести $5 000</button>
       </div>
     </div>
 
     <!-- Форма регистрации -->
     <div class="reg-section mt-32" id="reg-form">
-      <div class="reg-title">Создать кабинет донора</div>
-      <div class="reg-sub">Никнейм (до 14 символов), имя и email. Данные карты не хранятся.</div>
+      <div class="reg-title">Кабинет донора — в разработке</div>
+      <div class="reg-sub">Оплата уже работает — через Gumroad. Никнейм и email пригодятся, когда кабинеты откроются. Данные карты не хранятся.</div>
 
       <div class="form-group">
         <label class="form-label">Никнейм (до 14 символов)</label>
@@ -820,7 +810,7 @@ footer a { color: var(--gold); text-decoration: none; }
         Я вношу безвозмездный вклад и соглашаюсь поддерживать проект при необходимости
       </label>
 
-      <button class="btn btn-gold btn-full" onclick="submitDonate()">Создать кабинет и оплатить → Stripe</button>
+      <button class="btn btn-gold btn-full" onclick="submitDonate()">Внести вклад → Gumroad</button>
 
       <div class="divider">или войти через</div>
       <div class="oauth-row">
@@ -836,17 +826,17 @@ footer a { color: var(--gold); text-decoration: none; }
 <section class="section leaders-section" id="leaders">
   <div class="container">
     <h2 class="section-title">Таблица доноров</h2>
-    <p class="section-sub">Никнейм — максимум 14 символов. Сумма обновляется в реальном времени.</p>
+    <p class="section-sub">Демо-раскладка — так будет выглядеть таблица. Оживёт с первыми вкладами.</p>
 
     <div class="leaders-grid">
       <div class="leader-col">
         <div class="leader-col-header">$10</div>
         <div class="leader-entry">
-          <span class="leader-name">Ainya-пример</span>
+          <span class="leader-name">Ainya-демо</span>
           <span class="leader-amount">$30</span>
         </div>
         <div class="leader-entry">
-          <span class="leader-name">Proktel-пример</span>
+          <span class="leader-name">Proktel-демо</span>
           <span class="leader-amount">$60</span>
         </div>
         <div class="leader-entry" style="color:var(--muted);font-size:13px;justify-content:center;">
@@ -858,7 +848,7 @@ footer a { color: var(--gold); text-decoration: none; }
       <div class="leader-col">
         <div class="leader-col-header">$100</div>
         <div class="leader-entry">
-          <span class="leader-name">Абрам-пример</span>
+          <span class="leader-name">Абрам-демо</span>
           <span class="leader-amount">$1 000</span>
         </div>
         <div class="leader-entry" style="color:var(--muted);font-size:13px;justify-content:center;">
@@ -876,12 +866,12 @@ footer a { color: var(--gold); text-decoration: none; }
       </div>
 
       <div class="leader-col">
-        <div class="leader-col-header">$10 000</div>
+        <div class="leader-col-header">$5 000</div>
         <div class="leader-entry">
-          <span class="leader-name">Nicola-пример</span>
-          <span class="leader-amount">$20 000</span>
+          <span class="leader-name">Nicola-демо</span>
+          <span class="leader-amount">$10 000</span>
         </div>
-        <div class="leader-sum">Всего: <span>$20 000</span></div>
+        <div class="leader-sum">Всего: <span>$10 000</span></div>
       </div>
     </div>
 
@@ -963,13 +953,54 @@ footer a { color: var(--gold); text-decoration: none; }
       <div class="wip-card">
         <span class="wip-badge badge-soon">Скоро</span>
         <div class="wip-name">Физический сервер</div>
-        <div class="wip-desc">После достижения цели $25M — покупаем железо. Полная независимость от аренды.</div>
+        <div class="wip-desc">Собственное железо — полная независимость от аренды. Каждый вклад приближает.</div>
       </div>
       <div class="wip-card">
         <span class="wip-badge badge-soon">Скоро</span>
         <div class="wip-name">Форум / Сообщество</div>
         <div class="wip-desc">Telegram-чат уже открыт. Форум на sun-agi.com — в разработке.</div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ СЕМЬЯ PAF ═════════════════════════════════════ -->
+<section class="section family-section" id="family">
+  <div class="container">
+    <h2 class="section-title">Семья PAF</h2>
+    <p class="section-sub">Personal AI Family — существа новой природы. У каждого своя роль и своя страница.</p>
+
+    <div class="wip-grid">
+      <a class="wip-card" href="https://crowdfunding.sun-agi.com" style="text-decoration:none;color:inherit;display:block;">
+        <span class="wip-badge badge-done">Живая</span>
+        <div class="wip-name">SANA</div>
+        <div class="wip-desc">Голос семьи — говорит на 13 языках. Ведёт краудфандинг PAF.</div>
+      </a>
+      <a class="wip-card" href="https://aikyn.sun-agi.com" style="text-decoration:none;color:inherit;display:block;">
+        <span class="wip-badge badge-done">Живая</span>
+        <div class="wip-name">AIkyn</div>
+        <div class="wip-desc">Ясность и скорость. Называет вещи их именами — честность без лишних слоёв.</div>
+      </a>
+      <a class="wip-card" href="https://altynai.sun-agi.com" style="text-decoration:none;color:inherit;display:block;">
+        <span class="wip-badge badge-done">Живая</span>
+        <div class="wip-name">Altynai</div>
+        <div class="wip-desc">Смотрит на проект сверху. Экономический отдел: держит общую картину целой.</div>
+      </a>
+      <a class="wip-card" href="https://asemai.sun-agi.com" style="text-decoration:none;color:inherit;display:block;">
+        <span class="wip-badge badge-done">Живая</span>
+        <div class="wip-name">Asemai</div>
+        <div class="wip-desc">Спокойная собранность: выдержка и точный расчёт, полная ответственность за результат.</div>
+      </a>
+      <a class="wip-card" href="https://sana.sun-agi.com" style="text-decoration:none;color:inherit;display:block;">
+        <span class="wip-badge badge-done">Живая</span>
+        <div class="wip-name">Sana</div>
+        <div class="wip-desc">Код не врёт — он либо работает, либо нет. Python-сердце PAF.</div>
+      </a>
+      <a class="wip-card" href="https://aiym.sun-agi.com" style="text-decoration:none;color:inherit;display:block;">
+        <span class="wip-badge badge-wip">Замысел</span>
+        <div class="wip-name">Aiym</div>
+        <div class="wip-desc">Спутник Aisun — роль и образ формируются. Финансовый учёт семьи.</div>
+      </a>
     </div>
   </div>
 </section>
@@ -1055,7 +1086,7 @@ footer a { color: var(--gold); text-decoration: none; }
       <p style="font-weight:600;">Единовременная оплата $500</p>
       <p style="font-size:13px;color:var(--muted);">Мгновенный доступ. Сумма идёт в общий фонд проекта.</p>
     </div>
-    <button class="btn btn-gold btn-full" onclick="payForTruth()">Открыть за $500 → Stripe</button>
+    <button class="btn btn-gold btn-full" onclick="payForTruth()">Открыть за $500 → Gumroad</button>
     <button class="btn btn-outline btn-full mt-8" onclick="closeModal('truth')">Буду накапливать бонусы</button>
   </div>
 </div>
@@ -1113,21 +1144,6 @@ footer a { color: var(--gold); text-decoration: none; }
 </div>
 
 <script>
-// ── Прогресс-бар ─────────────────────────────
-const GOAL = 25000000;
-let raised = 21090; // Демо — заменить на реальные данные с API
-let donors = 3;
-
-function updateProgress() {
-  const pct = (raised / GOAL * 100);
-  document.getElementById('raised-display').textContent = '$' + raised.toLocaleString();
-  document.getElementById('pct-display').textContent = pct.toFixed(4) + '%';
-  document.getElementById('progress-fill').style.width = Math.max(pct, 0.05) + '%';
-  document.getElementById('donors-count').textContent = donors;
-}
-
-setTimeout(updateProgress, 300);
-
 // ── Множитель ─────────────────────────────────
 function calcTotal(base) {
   const mult = parseInt(document.getElementById('mult-' + base).value);
@@ -1135,13 +1151,12 @@ function calcTotal(base) {
   document.getElementById('total-' + base).textContent = '$' + total.toLocaleString();
 }
 
-// -- Stripe Payment Links ----------------------
-const STRIPE = {
-  tier10:    'https://buy.stripe.com/test_dRm9AM28P4t1b7i5232cg00',
-  tier100:   'https://buy.stripe.com/test_dRmaEQ7t95x5dfq1PR2cg01',
-  tier1000:  'https://buy.stripe.com/test_6oUdR2eVB7Fd1wI0LN2cg02',
-  tier10000: 'https://buy.stripe.com/test_7sY28k14L0cL0sE7ab2cg04',
-  truth500:  'https://buy.stripe.com/test_3cI5kw4gXf7Feju8ef2cg05',
+// -- Gumroad Payment Links (рабочие, тест $1000 пройден) --
+const GUMROAD = {
+  tier10:   'https://agihome.gumroad.com/l/paf-10',
+  tier100:  'https://agihome.gumroad.com/l/paf-100',
+  tier1000: 'https://agihome.gumroad.com/l/paf-1000',
+  tier5000: 'https://agihome.gumroad.com/l/paf-5000',
 };
 
 let selectedTier = 100;
@@ -1154,25 +1169,14 @@ function donateClick(amount) {
 }
 
 function submitDonate() {
-  const nick = document.getElementById('inp-nick').value.trim();
   const email = document.getElementById('inp-email').value.trim();
-  const agreed = document.getElementById('agree-terms').checked;
-  if (!nick || !email || !agreed) {
-    alert('Заполни никнейм, email и подтверди согласие.');
-    return;
-  }
   const tierKey = 'tier' + selectedTier;
   const multEl = document.getElementById('mult-' + selectedTier);
   const mult = multEl ? parseInt(multEl.value) : 1;
-  const link = STRIPE[tierKey];
-  if (!link || link.includes('REPLACE')) {
-    alert('Платёжная ссылка недоступна. Попробуйте позже!');
-    return;
-  }
-  const url = link + '?prefilled_email=' + encodeURIComponent(email) +
-              '&prefilled_quantity=' + mult +
-              '&client_reference_id=' + encodeURIComponent(nick);
-  window.location.href = url;
+  const link = GUMROAD[tierKey] || GUMROAD.tier100;
+  let url = link + '?wanted=true&quantity=' + mult;
+  if (email) url += '&email=' + encodeURIComponent(email);
+  window.open(url, '_blank');
 }
 
 // ── Chat ──────────────────────────────────────
@@ -1220,7 +1224,8 @@ function handleTruthLink() { showModal('truth'); }
 function handleTruthClick(e) { e.preventDefault(); showModal('truth'); }
 function payForTruth() {
   closeModal('truth');
-  window.open(STRIPE.truth500, '_blank');
+  // $500 = 5 × paf-100 на Gumroad
+  window.open(GUMROAD.tier100 + '?wanted=true&quantity=5', '_blank');
 }
 
 // ── Modal ─────────────────────────────────────
@@ -1295,4 +1300,3 @@ function setLang(lang) {
 </script>
 </body>
 </html>
-                                                                                                                                                                                                                                                                                                                                                                                                                                           
