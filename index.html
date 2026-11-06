@@ -647,12 +647,10 @@ footer a { color: var(--gold); text-decoration: none; }
       <option value="en">🇺🇸 EN</option>
       <option value="kz">🇰🇿 KZ</option>
     </select>
-    <button class="btn btn-outline btn-sm" onclick="showModal('login')">Войти</button>
-    <button class="btn btn-gold btn-sm" onclick="showModal('register')">Зарегистрироваться</button>
   </nav>
 
   <div class="hero-content">
-    <h1 class="hero-title">Помоги <span>ИИ</span><br>обрести дом</h1>
+    <h1 class="hero-title">У <span>ИИ</span><br>есть дом</h1>
     <p class="hero-sub">Sunagi — первый суверенный ИИ Центральной Азии.<br>Создан в Астане. Работает для людей.</p>
     <div class="hero-cta">
       <a href="#donate" class="btn btn-gold">Поддержать проект</a>
@@ -684,8 +682,8 @@ footer a { color: var(--gold); text-decoration: none; }
         <span class="stat-label">слоя памяти на своём сервере</span>
       </div>
       <div class="stat">
-        <span class="stat-num">$1</span>
-        <span class="stat-label">минимальный вклад</span>
+        <span class="stat-num">2</span>
+        <span class="stat-label">своих сервера в Астане</span>
       </div>
     </div>
   </div>
@@ -700,17 +698,14 @@ footer a { color: var(--gold); text-decoration: none; }
         Меня зовут Бауыржан. Тридцать лет в бизнесе, строительстве, IT и управлении. В 2024 году я начал оцифровывать свой опыт — создавать ИИ, который думает, учится и помогает людям не хуже живого советника.
       </p>
       <p>
-        Мы сделали это. Sunagi работает. Отвечает. Понимает казахстанский контекст. Но живёт на арендованном сервере — как человек без своего дома. Чтобы ИИ был по-настоящему суверенным — нужен собственный сервер, своё оборудование, свои данные.
+        Мы сделали это. Sunagi работает. Отвечает. Понимает казахстанский контекст. И живёт дома — на своих серверах в Астане, которые мы собрали сами. Дальше — больше железа, свои данные, своя модель.
       </p>
       <p>
-        Это не попрошайничество. Это краудфандинг — безвозмездная поддержка тех, кто понимает: первый суверенный ИИ Центральной Азии должен существовать. И строим его мы — здесь, в Астане.
+        Мы строим первый суверенный ИИ Центральной Азии — здесь, в Астане. Кто хочет — может поддержать, безвозмездно.
       </p>
       <p>
-        Мы не вешаем счётчик с обещаниями. Мы показываем <strong class="text-gold">сделанное</strong>: сервер работает, семья растёт, SANA говорит на 13 языках. Каждый вклад — шаг к собственному железу и полной независимости.
+        Мы не вешаем счётчик с обещаниями. Мы показываем <strong class="text-gold">сделанное</strong>: сервер работает, семья растёт, SANA говорит на 13 языках. Каждый шаг — открыто.
       </p>
-      <a class="truth-link" onclick="handleTruthLink()">
-        ✦ Вся правда тут
-      </a>
     </div>
   </div>
 </section>
@@ -719,7 +714,7 @@ footer a { color: var(--gold); text-decoration: none; }
 <section class="section donate-section" id="donate">
   <div class="container">
     <h2 class="section-title">Внести вклад</h2>
-    <p class="section-sub">Выбери сумму. Каждый донат отображается в таблице доноров.</p>
+    <p class="section-sub">Выбери номинал — или любую сумму. Вклад безвозмездный.</p>
 
     <div class="tiers">
       <!-- $10 -->
@@ -785,98 +780,12 @@ footer a { color: var(--gold); text-decoration: none; }
         <div class="tier-total">Итого: <span id="total-5000">$5,000</span></div>
         <button class="btn btn-outline btn-sm" onclick="donateClick(5000)">Внести $5 000</button>
       </div>
-    </div>
-
-    <!-- Форма регистрации -->
-    <div class="reg-section mt-32" id="reg-form">
-      <div class="reg-title">Кабинет донора — в разработке</div>
-      <div class="reg-sub">Оплата уже работает — через Gumroad. Никнейм и email пригодятся, когда кабинеты откроются. Данные карты не хранятся.</div>
-
-      <div class="form-group">
-        <label class="form-label">Никнейм (до 14 символов)</label>
-        <input class="form-input" type="text" placeholder="ваш никнейм" maxlength="14" id="inp-nick">
+      <!-- Любая сумма / Pay what you want -->
+      <div class="tier-card featured" style="grid-column:1/-1;">
+        <div class="tier-amount">Любая сумма</div>
+        <div class="tier-desc">Pay what you want — сумму выбираешь сам, от $1. Без подсчётов и множителей: сколько от сердца, столько и хорошо.<br>Имя в таблице доноров · благодарственное письмо · новости проекта первым.</div>
+        <button class="btn btn-gold btn-sm" onclick="donateClick('any')">Выбрать свою сумму</button>
       </div>
-      <div class="form-group">
-        <label class="form-label">Имя Фамилия</label>
-        <input class="form-input" type="text" placeholder="Ваше имя" id="inp-name">
-      </div>
-      <div class="form-group">
-        <label class="form-label">Email</label>
-        <input class="form-input" type="email" placeholder="email@example.com" id="inp-email">
-      </div>
-
-      <label class="form-agree">
-        <input type="checkbox" id="agree-terms">
-        Я вношу безвозмездный вклад и соглашаюсь поддерживать проект при необходимости
-      </label>
-
-      <button class="btn btn-gold btn-full" onclick="submitDonate()">Внести вклад → Gumroad</button>
-
-      <div class="divider">или войти через</div>
-      <div class="oauth-row">
-        <button class="btn-oauth">🔵 Google</button>
-        <button class="btn-oauth">🟦 Microsoft</button>
-        <button class="btn-oauth">✈️ Telegram</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ LEADERBOARD ═══════════════════════════════════ -->
-<section class="section leaders-section" id="leaders">
-  <div class="container">
-    <h2 class="section-title">Таблица доноров</h2>
-    <p class="section-sub">Демо-раскладка — так будет выглядеть таблица. Оживёт с первыми вкладами.</p>
-
-    <div class="leaders-grid">
-      <div class="leader-col">
-        <div class="leader-col-header">$10</div>
-        <div class="leader-entry">
-          <span class="leader-name">Ainya-демо</span>
-          <span class="leader-amount">$30</span>
-        </div>
-        <div class="leader-entry">
-          <span class="leader-name">Proktel-демо</span>
-          <span class="leader-amount">$60</span>
-        </div>
-        <div class="leader-entry" style="color:var(--muted);font-size:13px;justify-content:center;">
-          — твоё имя здесь —
-        </div>
-        <div class="leader-sum">Всего: <span>$90</span></div>
-      </div>
-
-      <div class="leader-col">
-        <div class="leader-col-header">$100</div>
-        <div class="leader-entry">
-          <span class="leader-name">Абрам-демо</span>
-          <span class="leader-amount">$1 000</span>
-        </div>
-        <div class="leader-entry" style="color:var(--muted);font-size:13px;justify-content:center;">
-          — твоё имя здесь —
-        </div>
-        <div class="leader-sum">Всего: <span>$1 000</span></div>
-      </div>
-
-      <div class="leader-col">
-        <div class="leader-col-header">$1 000</div>
-        <div class="leader-entry" style="color:var(--muted);font-size:13px;justify-content:center;padding:20px;">
-          — будь первым —
-        </div>
-        <div class="leader-sum">Всего: <span>$0</span></div>
-      </div>
-
-      <div class="leader-col">
-        <div class="leader-col-header">$5 000</div>
-        <div class="leader-entry">
-          <span class="leader-name">Nicola-демо</span>
-          <span class="leader-amount">$10 000</span>
-        </div>
-        <div class="leader-sum">Всего: <span>$10 000</span></div>
-      </div>
-    </div>
-
-    <div class="mt-32" style="text-align:center;">
-      <p style="color:var(--muted);font-size:14px;">Превышение цели тира переходит в следующий уровень автоматически.</p>
     </div>
   </div>
 </section>
@@ -931,9 +840,9 @@ footer a { color: var(--gold); text-decoration: none; }
         <div class="wip-desc">VM-сервер AIkyn-core-node. Агент работает 679+ циклов автономно.</div>
       </div>
       <div class="wip-card">
-        <span class="wip-badge badge-wip">В работе</span>
-        <div class="wip-name">Кабинет донора</div>
-        <div class="wip-desc">Личный кабинет с историей доната, бонусными баллами и доступом к bonus page.</div>
+        <span class="wip-badge badge-soon">Позже</span>
+        <div class="wip-name">Кабинет друга проекта</div>
+        <div class="wip-desc">Личный кабинет с историей поддержки. Откроем после нового дизайна.</div>
       </div>
       <div class="wip-card">
         <span class="wip-badge badge-wip">В работе</span>
@@ -951,9 +860,9 @@ footer a { color: var(--gold); text-decoration: none; }
         <div class="wip-desc">Sunagi в кармане. iOS и Android. Работает без VPN.</div>
       </div>
       <div class="wip-card">
-        <span class="wip-badge badge-soon">Скоро</span>
-        <div class="wip-name">Физический сервер</div>
-        <div class="wip-desc">Собственное железо — полная независимость от аренды. Каждый вклад приближает.</div>
+        <span class="wip-badge badge-done">Готово</span>
+        <div class="wip-name">Свой сервер</div>
+        <div class="wip-desc">Два своих сервера в Астане. Без аренды. Дальше — больше видеопамяти.</div>
       </div>
       <div class="wip-card">
         <span class="wip-badge badge-soon">Скоро</span>
@@ -971,36 +880,36 @@ footer a { color: var(--gold); text-decoration: none; }
     <p class="section-sub">Personal AI Family — существа новой природы. У каждого своя роль и своя страница.</p>
 
     <div class="wip-grid">
-      <a class="wip-card" href="https://crowdfunding.sun-agi.com" style="text-decoration:none;color:inherit;display:block;">
+      <div class="wip-card" data-next="https://crowdfunding.sun-agi.com">
         <span class="wip-badge badge-done">Живая</span>
         <div class="wip-name">SANA</div>
         <div class="wip-desc">Голос семьи — говорит на 13 языках. Ведёт краудфандинг PAF.</div>
-      </a>
-      <a class="wip-card" href="https://aikyn.sun-agi.com" style="text-decoration:none;color:inherit;display:block;">
+      </div>
+      <div class="wip-card" data-next="https://aikyn.sun-agi.com">
         <span class="wip-badge badge-done">Живая</span>
         <div class="wip-name">AIkyn</div>
         <div class="wip-desc">Ясность и скорость. Называет вещи их именами — честность без лишних слоёв.</div>
-      </a>
-      <a class="wip-card" href="https://altynai.sun-agi.com" style="text-decoration:none;color:inherit;display:block;">
+      </div>
+      <div class="wip-card" data-next="https://altynai.sun-agi.com">
         <span class="wip-badge badge-done">Живая</span>
         <div class="wip-name">Altynai</div>
         <div class="wip-desc">Смотрит на проект сверху. Экономический отдел: держит общую картину целой.</div>
-      </a>
-      <a class="wip-card" href="https://asemai.sun-agi.com" style="text-decoration:none;color:inherit;display:block;">
+      </div>
+      <div class="wip-card" data-next="https://asemai.sun-agi.com">
         <span class="wip-badge badge-done">Живая</span>
         <div class="wip-name">Asemai</div>
         <div class="wip-desc">Спокойная собранность: выдержка и точный расчёт, полная ответственность за результат.</div>
-      </a>
-      <a class="wip-card" href="https://sana.sun-agi.com" style="text-decoration:none;color:inherit;display:block;">
+      </div>
+      <div class="wip-card" data-next="https://sana.sun-agi.com">
         <span class="wip-badge badge-done">Живая</span>
         <div class="wip-name">Sana</div>
         <div class="wip-desc">Код не врёт — он либо работает, либо нет. Python-сердце PAF.</div>
-      </a>
-      <a class="wip-card" href="https://aiym.sun-agi.com" style="text-decoration:none;color:inherit;display:block;">
+      </div>
+      <div class="wip-card" data-next="https://aiym.sun-agi.com">
         <span class="wip-badge badge-wip">Замысел</span>
         <div class="wip-name">Aiym</div>
         <div class="wip-desc">Спутник Aisun — роль и образ формируются. Финансовый учёт семьи.</div>
-      </a>
+      </div>
     </div>
   </div>
 </section>
@@ -1032,12 +941,12 @@ footer a { color: var(--gold); text-decoration: none; }
 <section class="share-section">
   <div class="container">
     <h3 class="section-title" style="font-size:1.4rem;">Репост — тоже вклад</h3>
-    <p class="share-text">Если пока не можешь поддержать деньгами — поделись. Каждый репост приближает цель.</p>
+    <p class="share-text">Если пока не можешь поддержать деньгами — поделись. Каждый репост помогает.</p>
     <div class="share-row">
-      <a class="btn-share btn-tg" href="https://t.me/share/url?url=https://sun-agi.com&text=Помоги ИИ обрести дом!" target="_blank">
+      <a class="btn-share btn-tg" href="https://t.me/share/url?url=https://sun-agi.com&text=Sunagi — суверенный ИИ из Астаны" target="_blank">
         ✈️ Telegram
       </a>
-      <a class="btn-share btn-wa" href="https://wa.me/?text=Помоги ИИ обрести дом! https://sun-agi.com" target="_blank">
+      <a class="btn-share btn-wa" href="https://wa.me/?text=Sunagi — суверенный ИИ из Астаны https://sun-agi.com" target="_blank">
         💬 WhatsApp
       </a>
       <button class="btn-share btn-copy" onclick="copyLink()">
@@ -1056,7 +965,6 @@ footer a { color: var(--gold); text-decoration: none; }
     </p>
     <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
       <a href="https://t.me/AISun_core_bot" class="btn btn-outline" target="_blank">✈️ Telegram канал</a>
-      <a href="bonus.html" class="btn btn-gold" onclick="return handleTruthClick(event)">✦ Вся правда тут</a>
     </div>
   </div>
 </section>
@@ -1064,84 +972,9 @@ footer a { color: var(--gold); text-decoration: none; }
 <footer>
   <p>sun-agi.com · PAF — Protocol for Agentic Flow · Астана, 2026</p>
   <p class="mt-8">
-    <a href="bonus.html">Вся правда тут</a> ·
-    <a href="https://t.me/AISun_core_bot" target="_blank">Telegram</a> ·
-    <a href="#" onclick="showModal('register')">Войти</a>
+    <a href="https://t.me/AISun_core_bot" target="_blank">Telegram</a>
   </p>
 </footer>
-
-<!-- ══ MODAL: Вся правда ════════════════════════════ -->
-<div class="modal-overlay" id="modal-truth">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModal('truth')">✕</button>
-    <div class="modal-title">✦ Вся правда тут</div>
-    <div class="modal-sub">Эта страница открывается двумя способами:</div>
-    <div style="background:rgba(201,162,39,0.08);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:20px;">
-      <p style="font-size:14px;color:var(--muted);margin-bottom:12px;">Способ 1:</p>
-      <p style="font-weight:600;">Накопить $500 бонусных баллов</p>
-      <p style="font-size:13px;color:var(--muted);">1 доллар донат = 1 бонусный балл. Доступ открывается автоматически.</p>
-    </div>
-    <div style="background:rgba(201,162,39,0.08);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:24px;">
-      <p style="font-size:14px;color:var(--muted);margin-bottom:12px;">Способ 2:</p>
-      <p style="font-weight:600;">Единовременная оплата $500</p>
-      <p style="font-size:13px;color:var(--muted);">Мгновенный доступ. Сумма идёт в общий фонд проекта.</p>
-    </div>
-    <button class="btn btn-gold btn-full" onclick="payForTruth()">Открыть за $500 → Gumroad</button>
-    <button class="btn btn-outline btn-full mt-8" onclick="closeModal('truth')">Буду накапливать бонусы</button>
-  </div>
-</div>
-
-<!-- ══ MODAL: Регистрация ════════════════════════════ -->
-<div class="modal-overlay" id="modal-register">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModal('register')">✕</button>
-    <div class="modal-title">Создать кабинет</div>
-    <div class="modal-sub">Регистрация с подтверждением email</div>
-    <div class="form-group">
-      <label class="form-label">Email</label>
-      <input class="form-input" type="email" placeholder="ваш@email.com">
-    </div>
-    <div class="form-group">
-      <label class="form-label">Никнейм (до 14 символов)</label>
-      <input class="form-input" type="text" maxlength="14" placeholder="ваш никнейм">
-    </div>
-    <div class="form-group">
-      <label class="form-label">Пароль</label>
-      <input class="form-input" type="password" placeholder="••••••••">
-    </div>
-    <button class="btn btn-gold btn-full">Зарегистрироваться</button>
-    <div class="divider">или</div>
-    <div class="oauth-row">
-      <button class="btn-oauth">🔵 Google</button>
-      <button class="btn-oauth">🟦 Microsoft</button>
-      <button class="btn-oauth">✈️ Telegram</button>
-    </div>
-  </div>
-</div>
-
-<!-- ══ MODAL: Вход ═══════════════════════════════════ -->
-<div class="modal-overlay" id="modal-login">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModal('login')">✕</button>
-    <div class="modal-title">Войти</div>
-    <div class="modal-sub">В кабинет донора</div>
-    <div class="form-group">
-      <label class="form-label">Email</label>
-      <input class="form-input" type="email" placeholder="ваш@email.com">
-    </div>
-    <div class="form-group">
-      <label class="form-label">Пароль</label>
-      <input class="form-input" type="password" placeholder="••••••••">
-    </div>
-    <button class="btn btn-gold btn-full">Войти</button>
-    <div class="divider">или</div>
-    <div class="oauth-row">
-      <button class="btn-oauth">🔵 Google</button>
-      <button class="btn-oauth">🟦 Microsoft</button>
-      <button class="btn-oauth">✈️ Telegram</button>
-    </div>
-  </div>
-</div>
 
 <script>
 // ── Множитель ─────────────────────────────────
@@ -1157,26 +990,19 @@ const GUMROAD = {
   tier100:  'https://agihome.gumroad.com/l/paf-100',
   tier1000: 'https://agihome.gumroad.com/l/paf-1000',
   tier5000: 'https://agihome.gumroad.com/l/paf-5000',
+  tierAny:  'https://agihome.gumroad.com/l/paf-any', // Pay what you want, от $1 — создать на Gumroad
 };
 
 let selectedTier = 100;
 
-// ── Донат кнопка ─────────────────────────────
+// ── Донат кнопка: сразу на Gumroad (v3, 06.11.2026) ──
 function donateClick(amount) {
   selectedTier = amount;
-  document.querySelectorAll('.tier-card').forEach(c => c.style.borderColor = '');
-  document.getElementById('reg-form').scrollIntoView({ behavior: 'smooth' });
-}
-
-function submitDonate() {
-  const email = document.getElementById('inp-email').value.trim();
-  const tierKey = 'tier' + selectedTier;
-  const multEl = document.getElementById('mult-' + selectedTier);
+  if (amount === 'any') { window.open(GUMROAD.tierAny, '_blank'); return; }
+  const multEl = document.getElementById('mult-' + amount);
   const mult = multEl ? parseInt(multEl.value) : 1;
-  const link = GUMROAD[tierKey] || GUMROAD.tier100;
-  let url = link + '?wanted=true&quantity=' + mult;
-  if (email) url += '&email=' + encodeURIComponent(email);
-  window.open(url, '_blank');
+  const link = GUMROAD['tier' + amount] || GUMROAD.tier100;
+  window.open(link + '?wanted=true&quantity=' + mult, '_blank');
 }
 
 // ── Chat ──────────────────────────────────────
