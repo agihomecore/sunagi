@@ -7,7 +7,7 @@ Sunagi is open AI development: free software and, later, an OS with local AI. Ru
 | Часть | Что | Статус | Лицензия |
 | --- | --- | --- | --- |
 | SunMCP | свои инструменты ИИ из Telegram и с ПК | работает | Apache-2.0 |
-| Aisulu offline (SUNSTICK) | ИИ-помощница без интернета | работает | оболочка — Apache-2.0; веса — по лицензии модели |
+| AISun offline (SUNSTICK) | ИИ-помощник без интернета | работает | оболочка — Apache-2.0; веса — по лицензии модели |
 | S1 core | ядро: движки, задачи по расписанию, оценка | работает у нас, код откроем | AGPL-3.0 |
 | Sunagi Browser | браузер с локальным ИИ (сначала расширение) | скоро | Apache-2.0 |
 | Sunagi Search | поиск и индекс казахстанского веба | скоро | AGPL-3.0 |
@@ -20,13 +20,13 @@ Sunagi is open AI development: free software and, later, an OS with local AI. Ru
 https://sun-agi.com — вклад безвозмездный: не инвестиция, не даёт доли, дохода или прав на проект.
 
 ## Имена · Trademarks
-Sunagi, Aisulu, SUNSTICK — обозначения ИП SUN. Код открыт, имена — нет. См. TRADEMARKS.md.
+Sunagi, AISun, SUNSTICK — обозначения ИП SUN. Код открыт, имена — нет. См. TRADEMARKS.md.
 
 ## Лицензии этого репозитория · Licenses of this repo
 Здесь лежит сайт sun-agi.com.
 - Код сайта (HTML, CSS, JS) — Apache-2.0, см. LICENSE.
 - Тексты сайта — CC BY 4.0: можно цитировать и переводить со ссылкой на sun-agi.com.
-- Логотипы, изображения персонажей, видео и имена (Sunagi, Aisulu, SUNSTICK) — не входят в открытые лицензии, см. TRADEMARKS.md.
+- Логотипы, изображения персонажей, видео и имена (Sunagi, AISun, SUNSTICK) — не входят в открытые лицензии, см. TRADEMARKS.md.
 - Музыка — у каждого трека своя лицензия автора; список — в music/CREDITS.txt, когда треки будут добавлены.
 
 Общая схема проекта: клиенты, библиотеки и SunMCP — Apache-2.0; серверные части (ядро S1, поиск и индекс) — AGPL-3.0; тексты и данные — CC BY 4.0. Открыто по умолчанию; закрытыми остаются не больше 10% продуктов и всегда — данные людей и клиентов.
