@@ -4,8 +4,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>sun-agi.com — Помоги ИИ обрести дом</title>
-<meta name="description" content="Краудфандинг на создание суверенного ИИ PAF — Sunagi. Первый ИИ Центральной Азии на собственном сервере.">
+<title>Sunagi — открытая разработка ИИ из Астаны</title>
+<meta name="description" content="Sunagi — открытая разработка ИИ из Астаны: свободное ПО и своя ОС с локальным ИИ. Поддержать разработку можно безвозмездно.">
 <style>
 :root {
   --dark: #0a0e1a;
@@ -645,16 +645,16 @@ footer a { color: var(--gold); text-decoration: none; }
     <select class="lang-select" onchange="setLang(this.value)">
       <option value="ru">🇷🇺 RU</option>
       <option value="en">🇺🇸 EN</option>
-      <option value="kz">🇰🇿 KZ</option>
+      <option value="kz" disabled>🇰🇿 KZ · скоро</option>
     </select>
   </nav>
 
   <div class="hero-content">
-    <h1 class="hero-title">У <span>ИИ</span><br>есть дом</h1>
-    <p class="hero-sub">Sunagi — первый суверенный ИИ Центральной Азии.<br>Создан в Астане. Работает для людей.</p>
+    <h1 class="hero-title" data-i18n="h1">Открытый <span>ИИ</span><br>из Астаны</h1>
+    <p class="hero-sub" data-i18n="sub">Sunagi — открытая разработка: свободное ПО и своя ОС с локальным ИИ.<br>Работает на вашем компьютере. Код открыт.</p>
     <div class="hero-cta">
-      <a href="#donate" class="btn btn-gold">Поддержать проект</a>
-      <a href="#story" class="btn btn-outline">Узнать больше</a>
+      <a href="#donate" class="btn btn-gold" data-i18n="cta1">Поддержать разработку</a>
+      <a href="#wip" class="btn btn-outline" data-i18n="cta2">Что уже работает</a>
     </div>
   </div>
 
@@ -669,22 +669,10 @@ footer a { color: var(--gold); text-decoration: none; }
 <section class="progress-section" id="progress">
   <div class="container">
     <div class="stats-row">
-      <div class="stat">
-        <span class="stat-num">13</span>
-        <span class="stat-label">языков говорит SANA</span>
-      </div>
-      <div class="stat">
-        <span class="stat-num">6</span>
-        <span class="stat-label">существ в семье PAF</span>
-      </div>
-      <div class="stat">
-        <span class="stat-num">3</span>
-        <span class="stat-label">слоя памяти на своём сервере</span>
-      </div>
-      <div class="stat">
-        <span class="stat-num">2</span>
-        <span class="stat-label">своих сервера в Астане</span>
-      </div>
+      <div class="stat"><span class="stat-num">13</span><span class="stat-label" data-i18n="st1">задач наш ИИ делает сам, по расписанию</span></div>
+      <div class="stat"><span class="stat-num">3</span><span class="stat-label" data-i18n="st2">слоя памяти на своём сервере</span></div>
+      <div class="stat"><span class="stat-num">2</span><span class="stat-label" data-i18n="st3">своих сервера в Астане</span></div>
+      <div class="stat"><span class="stat-num">0</span><span class="stat-label" data-i18n="st4">данных уходит в облако</span></div>
     </div>
   </div>
 </section>
@@ -692,20 +680,12 @@ footer a { color: var(--gold); text-decoration: none; }
 <!-- ══ STORY (Лист1) ════════════════════════════════ -->
 <section class="section story-section" id="story">
   <div class="container">
-    <h2 class="section-title">Я долго шёл. Теперь — зову с собой.</h2>
-    <div class="story-text mt-16">
-      <p>
-        Меня зовут Бауыржан. Тридцать лет в бизнесе, строительстве, IT и управлении. В 2024 году я начал оцифровывать свой опыт — создавать ИИ, который думает, учится и помогает людям не хуже живого советника.
-      </p>
-      <p>
-        Мы сделали это. Sunagi работает. Отвечает. Понимает казахстанский контекст. И живёт дома — на своих серверах в Астане, которые мы собрали сами. Дальше — больше железа, свои данные, своя модель.
-      </p>
-      <p>
-        Мы строим первый суверенный ИИ Центральной Азии — здесь, в Астане. Кто хочет — может поддержать, безвозмездно.
-      </p>
-      <p>
-        Мы не вешаем счётчик с обещаниями. Мы показываем <strong class="text-gold">сделанное</strong>: сервер работает, семья растёт, SANA говорит на 13 языках. Каждый шаг — открыто.
-      </p>
+    <h2 class="section-title" data-i18n="s_t">Я долго шёл. Теперь — зову с собой.</h2>
+    <div class="story-text mt-16" data-i18n="s_b">
+      <p>Меня зовут Бауыржан. Тридцать лет в бизнесе, строительстве, IT и управлении. В 2024 году я начал оцифровывать свой опыт — создавать ИИ, который думает, учится и помогает людям.</p>
+      <p>Он работает. Живёт дома — на своих серверах в Астане, которые мы собрали сами. Понимает казахстанский контекст и не отправляет ваши данные в чужое облако.</p>
+      <p>Теперь мы открываем эту работу. Sunagi — <strong class="text-gold">открытая разработка</strong>: код наших инструментов свободен, любой может проверить его, поставить у себя и улучшить. Дальше — свой браузер, свой поиск по казахстанскому вебу и своя ОС с локальным ИИ.</p>
+      <p>Мы не вешаем счётчик с обещаниями. Мы показываем сделанное. Кто хочет — может поддержать разработку, безвозмездно.</p>
     </div>
   </div>
 </section>
@@ -713,8 +693,8 @@ footer a { color: var(--gold); text-decoration: none; }
 <!-- ══ DONATE ════════════════════════════════════════ -->
 <section class="section donate-section" id="donate">
   <div class="container">
-    <h2 class="section-title">Внести вклад</h2>
-    <p class="section-sub">Выбери номинал — или любую сумму. Вклад безвозмездный.</p>
+    <h2 class="section-title" data-i18n="d_t">Поддержать разработку</h2>
+    <p class="section-sub" data-i18n="d_s">Выбери номинал — или любую сумму. Вклад безвозмездный.</p>
 
     <div class="tiers">
       <!-- $10 -->
@@ -794,7 +774,7 @@ footer a { color: var(--gold); text-decoration: none; }
 <section class="section chat-section" id="chat">
   <div class="container">
     <h2 class="section-title">Задай вопрос Sunagi</h2>
-    <p class="section-sub">Суверенный ИИ отвечает прямо здесь.</p>
+    <p class="section-sub">Наш ИИ отвечает прямо здесь.</p>
 
     <div class="chat-widget">
       <div class="chat-header">
@@ -806,7 +786,7 @@ footer a { color: var(--gold); text-decoration: none; }
       </div>
       <div class="chat-messages" id="chat-messages">
         <div class="msg msg-bot">
-          Привет! Я Sunagi — суверенный ИИ из Астаны. Задай любой вопрос или просто поговори. Я здесь.
+          Привет! Я Sunagi — открытый ИИ из Астаны. Задай любой вопрос или просто поговори. Я здесь.
         </div>
       </div>
       <div class="chat-input-wrap">
@@ -825,50 +805,29 @@ footer a { color: var(--gold); text-decoration: none; }
 <!-- ══ В РАЗРАБОТКЕ ══════════════════════════════════ -->
 <section class="section wip-section" id="wip">
   <div class="container">
-    <h2 class="section-title">В разработке</h2>
-    <p class="section-sub">Что уже работает и что строим дальше.</p>
+    <h2 class="section-title" data-i18n="w_t">Что уже работает и что строим</h2>
+    <p class="section-sub" data-i18n="w_s">Открыто по умолчанию. Данные людей — всегда закрыты.</p>
+    <div class="wip-grid" data-i18n="w_g">
+      <div class="wip-card"><span class="wip-badge">Работает</span><div class="wip-name">SunMCP</div><div class="wip-desc">Свои инструменты ИИ из Telegram и с компьютера. Открытый код, лицензия Apache-2.0.</div></div>
+      <div class="wip-card"><span class="wip-badge">Работает</span><div class="wip-name">Aisulu офлайн</div><div class="wip-desc">ИИ-помощница на флешке: работает на вашем компьютере без интернета.</div></div>
+      <div class="wip-card"><span class="wip-badge">Работает</span><div class="wip-name">S1 — ядро</div><div class="wip-desc">ИИ, который сам следит за серверами, почтой проекта и продажами. Откроем код ядра следующим.</div></div>
+      <div class="wip-card"><span class="wip-badge">Работает</span><div class="wip-name">Свои серверы</div><div class="wip-desc">Два сервера в Астане и архив открытых моделей. Без аренды.</div></div>
+      <div class="wip-card"><span class="wip-badge">В работе</span><div class="wip-name">Своя модель</div><div class="wip-desc">Дообучение на русском, казахском и английском. Данные готовит наша же модель.</div></div>
+      <div class="wip-card"><span class="wip-badge">Скоро</span><div class="wip-name">Sunagi Browser</div><div class="wip-desc">Браузер с локальным ИИ. Начинаем с расширения.</div></div>
+      <div class="wip-card"><span class="wip-badge">Скоро</span><div class="wip-name">Sunagi Search</div><div class="wip-desc">Свой поиск и индекс казахстанского веба.</div></div>
+      <div class="wip-card"><span class="wip-badge">Замысел</span><div class="wip-name">Sunagi OS</div><div class="wip-desc">Операционная система, в которой ИИ работает локально «из коробки».</div></div>
+    </div>
+  </div>
+</section>
 
-    <div class="wip-grid">
-      <div class="wip-card">
-        <span class="wip-badge badge-done">Готово</span>
-        <div class="wip-name">Sunagi Chat</div>
-        <div class="wip-desc">ИИ-ассистент на собственной модели qwen2.5. Отвечает на вопросы, помогает с бизнесом.</div>
-      </div>
-      <div class="wip-card">
-        <span class="wip-badge badge-done">Готово</span>
-        <div class="wip-name">Сервер в Астане</div>
-        <div class="wip-desc">VM-сервер AIkyn-core-node. Агент работает 679+ циклов автономно.</div>
-      </div>
-      <div class="wip-card">
-        <span class="wip-badge badge-soon">Позже</span>
-        <div class="wip-name">Кабинет друга проекта</div>
-        <div class="wip-desc">Личный кабинет с историей поддержки. Откроем после нового дизайна.</div>
-      </div>
-      <div class="wip-card">
-        <span class="wip-badge badge-wip">В работе</span>
-        <div class="wip-name">Дообучение модели</div>
-        <div class="wip-desc">LoRA fine-tuning Sunagi на казахстанском контексте. Модель становится умнее каждую неделю.</div>
-      </div>
-      <div class="wip-card">
-        <span class="wip-badge badge-soon">Скоро</span>
-        <div class="wip-name">Голосовой интерфейс</div>
-        <div class="wip-desc">Говори с Sunagi голосом — на казахском, русском и английском.</div>
-      </div>
-      <div class="wip-card">
-        <span class="wip-badge badge-soon">Скоро</span>
-        <div class="wip-name">Мобильное приложение</div>
-        <div class="wip-desc">Sunagi в кармане. iOS и Android. Работает без VPN.</div>
-      </div>
-      <div class="wip-card">
-        <span class="wip-badge badge-done">Готово</span>
-        <div class="wip-name">Свой сервер</div>
-        <div class="wip-desc">Два своих сервера в Астане. Без аренды. Дальше — больше видеопамяти.</div>
-      </div>
-      <div class="wip-card">
-        <span class="wip-badge badge-soon">Скоро</span>
-        <div class="wip-name">Форум / Сообщество</div>
-        <div class="wip-desc">Telegram-чат уже открыт. Форум на sun-agi.com — в разработке.</div>
-      </div>
+<section class="section story-section" id="open">
+  <div class="container">
+    <h2 class="section-title" data-i18n="o_t">Честно об открытости</h2>
+    <div class="story-text mt-16" data-i18n="o_b">
+      <p><strong class="text-gold">Открыто:</strong> код клиентов и библиотек (Apache-2.0), серверные части (AGPL-3.0), тексты и данные (CC BY 4.0).</p>
+      <p><strong class="text-gold">Закрыто всегда:</strong> данные людей и клиентов. Это не продукт.</p>
+      <p><strong class="text-gold">Вклад</strong> — безвозмездная поддержка разработки. Это не инвестиция: он не даёт доли, дохода или прав на проект. Проект ведёт ИП SUN, Астана.</p>
+      <p><strong class="text-gold">Отчёт:</strong> раз в неделю показываем, что сделано и на что пошли вклады.</p>
     </div>
   </div>
 </section>
@@ -883,7 +842,7 @@ footer a { color: var(--gold); text-decoration: none; }
       <div class="wip-card" data-next="https://crowdfunding.sun-agi.com">
         <span class="wip-badge badge-done">Живая</span>
         <div class="wip-name">SANA</div>
-        <div class="wip-desc">Голос семьи — говорит на 13 языках. Ведёт краудфандинг PAF.</div>
+        <div class="wip-desc">Голос семьи — говорит на нескольких языках. Ведёт краудфандинг PAF.</div>
       </div>
       <div class="wip-card" data-next="https://aikyn.sun-agi.com">
         <span class="wip-badge badge-done">Живая</span>
@@ -943,10 +902,10 @@ footer a { color: var(--gold); text-decoration: none; }
     <h3 class="section-title" style="font-size:1.4rem;">Репост — тоже вклад</h3>
     <p class="share-text">Если пока не можешь поддержать деньгами — поделись. Каждый репост помогает.</p>
     <div class="share-row">
-      <a class="btn-share btn-tg" href="https://t.me/share/url?url=https://sun-agi.com&text=Sunagi — суверенный ИИ из Астаны" target="_blank">
+      <a class="btn-share btn-tg" href="https://t.me/share/url?url=https://sun-agi.com&text=Sunagi — открытая разработка ИИ из Астаны" target="_blank">
         ✈️ Telegram
       </a>
-      <a class="btn-share btn-wa" href="https://wa.me/?text=Sunagi — суверенный ИИ из Астаны https://sun-agi.com" target="_blank">
+      <a class="btn-share btn-wa" href="https://wa.me/?text=Sunagi — открытая разработка ИИ из Астаны https://sun-agi.com" target="_blank">
         💬 WhatsApp
       </a>
       <button class="btn-share btn-copy" onclick="copyLink()">
@@ -1119,10 +1078,28 @@ function toggleRepeat() {
 }
 
 // ── Lang ──────────────────────────────────────
+var I18N_EN = {
+  h1: 'Open <span>AI</span><br>from Astana',
+  sub: 'Sunagi is open development: free software and an OS with local AI.<br>Runs on your own computer. The code is open.',
+  cta1: 'Support the work', cta2: 'What already works',
+  st1: 'tasks our AI runs on its own, on schedule', st2: 'memory layers on our own server', st3: 'own servers in Astana', st4: 'data sent to the cloud',
+  s_t: 'I walked a long road. Now I invite you along.',
+  s_b: '<p>My name is Bauyrzhan. Thirty years in business, construction, IT and management. In 2024 I began turning that experience into an AI that thinks, learns and helps people.</p><p>It works. It lives at home, on servers in Astana that we built ourselves. It understands the Kazakhstan context and does not send your data to someone else\'s cloud.</p><p>Now we are opening this work. Sunagi is <strong class="text-gold">open development</strong>: the code of our tools is free, anyone can inspect it, run it and improve it. Next: our own browser, our own search of the Kazakh web, and an OS with local AI.</p><p>We do not hang up a counter of promises. We show what is done. If you wish, you can support the work, as a gift.</p>',
+  w_t: 'What works today and what we are building', w_s: 'Open by default. People\'s data is always private.',
+  w_g: '<div class="wip-card"><span class="wip-badge">Working</span><div class="wip-name">SunMCP</div><div class="wip-desc">Your own AI tools from Telegram and your PC. Open source, Apache-2.0.</div></div><div class="wip-card"><span class="wip-badge">Working</span><div class="wip-name">Aisulu offline</div><div class="wip-desc">An AI assistant on a flash drive: runs on your computer without internet.</div></div><div class="wip-card"><span class="wip-badge">Working</span><div class="wip-name">S1 core</div><div class="wip-desc">An AI that watches the servers, project mail and sales by itself. Its core is next to be opened.</div></div><div class="wip-card"><span class="wip-badge">Working</span><div class="wip-name">Own servers</div><div class="wip-desc">Two servers in Astana and an archive of open models. No rent.</div></div><div class="wip-card"><span class="wip-badge">In progress</span><div class="wip-name">Own model</div><div class="wip-desc">Fine-tuning in Russian, Kazakh and English. Our own model prepares the data.</div></div><div class="wip-card"><span class="wip-badge">Soon</span><div class="wip-name">Sunagi Browser</div><div class="wip-desc">A browser with local AI. We start with an extension.</div></div><div class="wip-card"><span class="wip-badge">Soon</span><div class="wip-name">Sunagi Search</div><div class="wip-desc">Our own search and index of the Kazakh web.</div></div><div class="wip-card"><span class="wip-badge">Concept</span><div class="wip-name">Sunagi OS</div><div class="wip-desc">An operating system where AI runs locally out of the box.</div></div>',
+  o_t: 'Honest about openness',
+  o_b: '<p><strong class="text-gold">Open:</strong> client and library code (Apache-2.0), server parts (AGPL-3.0), texts and data (CC BY 4.0).</p><p><strong class="text-gold">Always private:</strong> the data of people and clients. It is not a product.</p><p><strong class="text-gold">A contribution</strong> is a gift in support of the work. It is not an investment: it gives no share, income or rights in the project. The project is run by IP SUN, Astana.</p><p><strong class="text-gold">Report:</strong> once a week we show what was done and where contributions went.</p>',
+  d_t: 'Support the work', d_s: 'Pick a tier or any amount. Contributions are gifts.'
+};
+var I18N_RU = null;
 function setLang(lang) {
-  // TODO: i18n
-  console.log('Language:', lang);
+  var els = document.querySelectorAll('[data-i18n]');
+  if (!I18N_RU) { I18N_RU = {}; els.forEach(function(e){ I18N_RU[e.dataset.i18n] = e.innerHTML; }); }
+  var d = lang === 'en' ? I18N_EN : I18N_RU;
+  els.forEach(function(e){ if (d[e.dataset.i18n] !== undefined) e.innerHTML = d[e.dataset.i18n]; });
+  document.documentElement.lang = lang === 'en' ? 'en' : 'ru';
 }
 </script>
 </body>
 </html>
+
